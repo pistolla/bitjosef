@@ -1,0 +1,14 @@
+---
+layout: posts
+---
+
+<h1>Books</h1>
+
+<ul>
+	{% for book in site.categories.books %}
+	<li>
+		<a href="">{{book.title}}</a>
+		<p>{{book.meta}}
+	</li>
+	{% endfor %}
+</ul>
