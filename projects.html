@@ -2,13 +2,17 @@
 layout: posts
 ---
 
-<h1>Projects</h1>
+<!--Main layout-->
+<div class="row">
+	<h1>Projects</h1>
+	<ul class="breadcrumb">
+		{% for project in site.categories.projects %}
+		<li>
+			<a href="{{site.baseurl}}{{project.url}}">{{project.title}}</a>
+			<p>{{project.meta}}</p>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
 
-<ul>
-	{% for project in site.categories.projects %}
-	<li>
-		<a href="{{site.baseurl}}{{project.url}}">{{project.title}}</a>
-		<p>{{project.meta}}
-	</li>
-	{% endfor %}
-</ul>
+

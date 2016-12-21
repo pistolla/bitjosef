@@ -1,0 +1,65 @@
+- label: Android App Development
+  category: Technology
+  languages: JavaSE, JNI, PhoneGap
+  skill-set: Material Design, RxJava, MVP, 
+  environment: ASIDE, Gradle
+
+- label: Desktop development
+  category: Technology
+  languages: JavaSE, JavaFX, c, C++
+  skill-set: JavaFX, Chronicle-Queue
+  environment: NetBeans, maven 
+  
+- label: Web App and Frontend Design
+  category: Technology
+  languages: AngularJS, Bootstrap, Polymers, HTML5, CSS3
+  skill-set: Single Page App, Material Design
+  environment: WebStorm, PhpStorm, 
+  
+- label: Rest Api and Backend service
+  category: Technology
+  languages: PHP, JavaEE, Scala
+  skill-set: Apigility, ZF2, Symphony, Nodejs, Play framework
+  environment: Zend Studio, Eclipse, IntelliJ, Apache http
+  
+- label: Scripting 
+  category: Technology
+  languages: Bash scripting, Javascript, Google scripts, python, Nashorn
+  skill-set: DJango, 
+  environment: Cygwin, Linux Terminal, Chrome, 
+  
+- label: Database management
+  category: Technology
+  languages: SQL, DQL
+  skill-set: Doctrine, ORM, ORMLite, EclipseLinkJPA, PDO
+  environment: MYSQL, SQLite, MongoDB
+  
+- label: Internet of Things
+  category: Technology
+  languages: Java, C++, C, AlljoynJS, DukeTape
+  skill-set: peer to peer, DBUS protocol, RPC
+  environment: Alljoyn
+
+- label: Computer Vision
+  category: Technology
+  languages: Java, C++, JavaCC
+  skill-set: OpenCV, JavaCV
+  environment: Android
+  
+- label: Data Mining and Data Analysis
+  category: Technologys
+  languages: R, Java, D3
+  skill-set: Predictive Analysis, Weka, Mobile Metadata mining
+  environment: R, Weka, SPSS, Microsoft Excel, Android
+  
+- label: Theory of Computing
+  category: Technology
+  languages: Java
+  skill-set: Compiler construction, Regular Expression
+  environment: JACC
+  
+- label: Networking
+  category: Technology
+  languages: Cisco
+  skill-set: Network node configuration, Subnetting
+  environment: CISCO Packet Tracer

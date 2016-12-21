@@ -1,6 +1,6 @@
 ---
-layout: projects
-title: Comrade p2p platform that connects students cross-platform devices
+layout: post
+title: Comrade P2P platform
 meta: Connect and Collaborate
 source: http://www.comrade.com/about
 category: projects

@@ -1,0 +1,20 @@
+- label: University
+  category: Education
+  institution: Dedan Kimathi University of Technology
+  certificate: Bachelor of Science in Computer Science
+  begin: 2010/2/2
+  end: present
+  
+- label: College
+  category: Education
+  institution: 'Tracom College'
+  certificate: A+ and Networking
+  begin: 2010/2/2
+  end: present
+  
+- label: High school
+  category: Education
+  institution: Irigitathi Secondary School
+  certificate: Kenya Certificate of Secondary Education
+  begin: 2010/2/2
+  end: present

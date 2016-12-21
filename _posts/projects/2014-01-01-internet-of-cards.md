@@ -1,6 +1,6 @@
 ---
-layout: projects
-title: Crossplatform distribution connectivity
+layout: post
+title: Internet of Cards
 meta: Internet of Cards 
 source: http://www.internetofcards.com
 category: projects
