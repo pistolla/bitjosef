@@ -1,0 +1,66 @@
+<!--Second row-->
+<div class="row">
+	<div class="col-md-12">
+		<h4>Present Day </h4>
+		<!--First columnn-->
+		<div class="col-md-4">
+			<div class="card">
+				<!--Card content-->
+				<div class="card-block">
+					<!--Title-->
+					<h4 class="card-title">Workplace</h4>
+					<dl>
+						<dt>Working Place:</dt>
+						<dd>Freelance</dd>
+						
+						<dt>Location:</dt>
+						<dd>Gilgil</dd>
+						
+						<dt>Projects:</dt>
+						<dd>Wordpress website</dd>
+					</dl>
+					<a href="#" class="btn btn-primary waves-effect waves-light">Read more</a>
+				</div>
+				<!--/.Card content-->
+			</div>
+		</div>
+		<!-- endFirst column-->
+		
+		<!--Second columnn-->
+		<div class="col-md-8">
+			<!--Map container-->
+			<div id="map-container" class="z-depth-1 wow fadeInUp" style="height: 300px"></div>
+		</div>
+		<!-- endSecond column-->
+	</div>
+</div>
+
+<hr class="extra-margins" style="width: 80%; color: #86C67C;" />
+
+<div class="row">
+	<h4>Past Events and Teams</h4>
+	
+	{% for photo in site.data.event-photo-memories %}
+	<div class="col-lg-4">
+		<!--Card-->
+		<div class="card">
+
+			<!--Card image-->
+			<div class="view overlay hm-white-slight waves-effect waves-light">
+				<img src="{{site.baseurl}}{{photo.url}}" class="img-fluid" alt="{{photo.event}}">
+			</div>
+			<!--/.Card image-->
+
+			<!--Card content-->
+			<div class="card-block">
+				<!--Text-->
+				<p class="card-text">{{photo.event}}</p>
+			</div>
+			<!--/.Card content-->
+
+		</div>
+		<!--/.Card-->
+	</div>
+	{% endfor %}
+</div>
+

@@ -1,0 +1,52 @@
+---
+layout: default
+titleAfter: Software Developer, App developer, Data analyst,Web and Mobile app UI designer
+meta: Discover me through portfolio
+---
+	
+	<!--Main layout-->
+	<div class="container">
+	
+		<!--First row-->
+		<div class="row">
+			
+				<div class="jumbotron">
+					<div class="container">
+					<div class="col-md-4">
+							<img class="img-thumbnail img-responsive center-block img-fluid" src="{{site.baseurl}}/img/jumbotron/thumb_1.png"></img>
+					</div>
+					
+					<div class="col-md-8">
+						<h2 class="h2-responsive">Joseph Kamau</h2>
+						<h4>Web/Mobile app Developer | Data analyst | White Hat Pentester</h4>
+						<br />
+						<div class="social-icons">
+							<span><a href="www.facebook.com/"><img src="{{site.baseurl}}/img/icons/icon-facebook.png" alt="Facebook" /></a></span>
+							<span><a href="www.google.com"><img src="{{site.baseurl}}/img/icons/icon-google.png" alt="G++" /></a></span>
+							<span><a href="www.twitter.com"><img src="{{site.baseurl}}/img/icons/icon-twitter.png" alt="Twitter" /></a></span>
+							<span><a href="www.linkedin.com"><img src="{{site.baseurl}}/img/icons/icon-linkedin.png" alt="LinkedIn" /></a></span>
+						</div>
+						<br />
+						<blockquote><p><q>Welcome! I am excited you have visited my portfolio. Navigate through the pages to get acquainted on my skills. </q></p></blockquote>
+						<hr>
+						
+						<div>
+						{% for post in site.posts limit: 4 %}
+							{% for tag in post.tags %}
+							<span><a href="{{site.baseurl}}/tags/{{tag}}" class="btn btn-primary btn-selected waves-effect waves-light">{{ tag }}</a></span>
+							{% endfor %}
+						{% endfor %}
+						</div>
+					</div>
+					</div>
+				</div>
+			
+		</div>
+		<!--/.First row-->
+		
+		<hr class="extra-margins" style="width: 80%; color: #86C67C;" />
+		
+		{% include memories.html %}
+		
+		
+	</div>

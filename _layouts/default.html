@@ -1,12 +1,33 @@
+---
+title: Default
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+	
 	<title>Joseph Kamau</title>
-	<link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
+	
 	<meta name="description" content="{{page.meta}}">
+	<meta property="og:site_name" content="Dataphile Joe"/>
+	<meta property="og:title" content="{{ page.title | strip_html }}"/>
+	{% if (page.description) %}<meta property="og:description" content="{{ page.description | meta_tag }}"/>{% endif %}
+	{% if (page.images) %}<meta property="og:image" content="{{site.baseurl}}{{ page.images[0]['thumbnail'] }}"/>{% endif %}
+
+	<meta property="twitter:card" content="summary" />
+	<meta property="twitter:creator" content="@pinkissme" />
+	<meta property="twitter:url" content="{{ page.url | absolute_path }}" />
+	<meta property="twitter:title" content="{{ page.title | strip_html }}" />
+	{% if (page.description) %}
+	<meta property="twitter:description" content="{{ page.description | meta_tag }}" />
+	{% endif %}
+	{% if (page.images) %}
+	<meta property="twitter:image" content="{{site.baseurl}}{{ page.images[0]['thumbnail'] }}" />
+	{% endif %}
+	
+	<link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
 	<!-- Font Awesome -->
     <link rel="stylesheet" href="{{site.baseurl}}/css/font-awesome.min.css">
 
@@ -24,7 +45,6 @@
         /* TEMPLATE STYLES */
         
         main {
-            padding-top: 3rem;
             padding-bottom: 2rem;
         }
         
@@ -33,16 +53,15 @@
             margin-bottom: 2.5rem;
         }
         
-        .jumbotron {
-            text-align: center;
-        }
+        
     </style>
+	
 </head>
 <body>
 
 	<header>
 		<!--Navbar-->
-        <nav class="navbar navbar-dark primary-color-dark">
+        <nav class="navbar navbar-dark primary-color-dark navbar-fixed-top">
 
             <!-- Collapse button-->
             <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
@@ -52,8 +71,8 @@
             <div class="container">
 
                 <!--Collapse content-->
-                <div class="collapse navbar-toggleable-xs" id="collapseEx">
-					<img class="navbar-brand waves-effect waves-light" src="{{site.baseurl}}/img/masthead/logo.jpg"><a  href="{{site.baseurl}}/"></a></img>
+                <div class="collapse navbar-toggleable-xs navbar-right" id="collapseEx">
+					<a  href="{{site.baseurl}}/"><img class="navbar-brand waves-effect waves-light" alt="Dataphile" src="{{site.baseurl}}/img/masthead/dlogo.png" height="43" width="150" ></a></img>
 					{% include nav.html navclass="nav-top" %}
 				</div>
                 <!--/.Collapse content-->
@@ -64,9 +83,24 @@
         <!--/.Navbar-->
 	
 	</header>
-	<main>
-{{content}}
+	<!--wrapper -->
+	<main id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper" class="blue">
+			{% include sidenav.html %}
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				{{content}}
+			</div>
+		</div>
+		<!-- /#page-content-wrapper -->
 	</main>
+	<!-- /#wrapper -->
 	
 	
 	<!--Footer-->
@@ -75,17 +109,23 @@
 		<div class="container-fluid">
 			<div class="row">
 				<!--First column-->
-				<div class="col-md-6">
+				<div class="col-md-4">
 					<h5 class="title">Footer Content</h5>
 					<p>Good reputation is better than a good name.</p>
 				</div>
 				<!--/.First column-->
 				<!--Second column-->
-				<div class="col-md-6">
-					<h5 class="title">Links</h5>
+				<div class="col-md-4">
+					<h5 class="title social-section">Links</h5>
 					{% include nav.html navclass="nav-bottom" %}
 				</div>
 				<!--/.Second column-->
+				<!--Third column-->
+				<div class="col-md-4">
+					<h5 class="title">Address</h5>
+					{% include contact.html navclass="nav-bottom" %}
+				</div>
+				<!--/.Third column-->
 			</div>
 		</div>
 		<!--/.Footer Links-->
@@ -101,15 +141,26 @@
     <!-- SCRIPTS -->
 
     <!-- JQuery -->
-    <script type="text/javascript" src="{{site.baseurl}}/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/js/jquery.js"></script>
 
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="{{site.baseurl}}/js/tether.min.js"></script>
 
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="{{site.baseurl}}/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/js/bootstrap.js"></script>
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="{{site.baseurl}}/js/mdb.min.js"></script>
+	
+	<!-- Menu Toggle Script -->
+	<script>
+		(function($){
+			$("#wrapper").addClass("toggled");
+			$("#menu-toggle").click(function(e) {
+				e.preventDefault();
+				$("#wrapper").toggleClass("toggled");
+			});
+		})(jQuery);
+	</script>
 </body>
 </html

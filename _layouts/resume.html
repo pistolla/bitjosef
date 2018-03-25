@@ -1,0 +1,135 @@
+---
+layout: default
+category: about
+title: Print Resume
+---
+
+<!--Main layout-->
+<div class="container">
+	<div class="content">
+		{{content}}
+	<div>
+	<div class="row">
+		<div><a href="#"><img src="{{site.baseurl}}/img/icons/icon-acrobat-reader.png" alt="pdf" width="45" height="45"/><span>Download my Resume</span></a></div>
+		<!-- first column -->
+		<div class="col-md-9">
+			
+			<div class="container">
+				
+				<div class="card">
+					<div class="card-block">
+						<!--Credentials -->
+						<h4 class="card-title">Contact info</h4>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="center-block">
+									<h5>{{ site.data.resume-credentials[0].content }}</h5>
+									<p>{{ site.data.resume-credentials[1].content }}</p>
+									<p>{{ site.data.resume-credentials[2].content }}</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<h5>{{ site.data.resume-credentials[3].content }}</h5>
+								<p>{{ site.data.resume-credentials[4].content }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card-block">
+						<!--Experience -->
+						<h4 class="card-title"> Experience</h4>
+						<dl>
+							{% for o in site.data.resume-experience %}
+								<dt>{{ o.label }}</dt>
+								<dd><strong>Company: </strong>{{ o.company }} ({{ o.begin }} - {{ o.end }})</dd>
+						</dl>
+						<p><strong>Responsibilities: </strong>{{ o.responsibilities }}</p>
+							{% endfor %}
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card-block">
+						<!--Education -->
+						<h4 class="card-title"> Certification </h4>
+						<dl>
+							{% for o in site.data.resume-education %}
+								<dt>{{ o.label }}</dt>
+								<dd>{{ o.certificate }}</dd>
+						</dl>
+						<p>{{ o.institution }}  ({{ o.begin }} - {{ o.end }})</p>
+							{% endfor %}	
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card-block">
+						<!--Technology -->
+						<h4 class="card-title"> Skills Summary</h4>
+						<dl>
+							{% for o in site.data.resume-technology-summary %}
+								<dt><strong>Technology: </strong>{{ o.label }}</dt>
+								<dd><strong>Language: </strong> {{ o.languages }}</dd>
+						</dl>
+						<p><strong>Libraries/Framework: </strong>{{ o.skill-set }}</p>
+						<p><strong>Environment: </strong>{{ o.environment }}</p>
+						<hr />
+							{% endfor %}
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card-block">
+						<!--Interests -->
+						<h4 class="card-title"> Interests</h4>
+						<dl>
+							{% for o in site.data.resume-interests %}
+								<dt>{{ o.label }}</dt>
+								<dd>{{ o.content }}</dd>
+						</dl>
+						<p>{{ o.skill-level }}</p>
+							{% endfor %}
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!-- second column -->
+		<div class="col-md-3">
+			<!--Card-->
+			<div class="card">
+				<div class="card-block">
+					<!--Objectives -->
+					<h4 class="card-title"> Objective</h4>
+					<dl>
+						{% for o in site.data.resume-objective %}
+							<dd>{{ o.content }}</dd>
+						{% endfor %}
+					</dl>
+				</div>
+			</div>
+			
+			<!--Card-->
+			<div class="card">
+				<!--Card content-->
+				<div class="card-block">
+					<!--Title-->
+					<h4 class="card-title">Table of Contents</h4>
+					<ul>
+						<li><a href="#/credentials" >Contact</a></li>
+						<li><a href="#/experience" >Experience</a></li>
+						<li><a href="#/education" >Certifications</a></li>
+						<li><a href="#/technology" >Skills</a></li>
+						<li><a href="#/interests" >Interests</a></li>
+						<li><a href="#/referees" >Referees</a></li>
+					</ul>
+				</div>
+				<!--/.Card content-->
+
+			</div>
+		</div>
+	</div>
+</div>

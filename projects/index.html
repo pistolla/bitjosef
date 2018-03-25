@@ -1,0 +1,38 @@
+---
+layout: posts
+title: IT projects
+category: projects
+---
+
+<div id="middle">
+
+  <div class="container">
+    
+    <div class="row">
+    
+		<div class="span8">
+			<div id="main">
+			
+				<h2 class="title">{{ page.title }}</h2>
+
+			</div>
+		</div>
+	</div>
+	<div class="first row">
+
+  {% for post in site.articles limit:1 %}
+
+    <div class="span8">
+      <div class="teaser">
+        <div class="keyword"><a href="/tags/{{ post.tags[0] | slugify }}/" class="tag-link">{{ post.tags[0] }}</a></div>
+        {% if (post.images) %}<div class="image"><a href="{{ post.url }}" title="{{ post.title }}"><img src="{{ post.images[0] | format_main_image }}" /></a></div>{% endif %}
+        <div class="title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></div>
+        <div class="description">{{ post.description }}</div>
+        <div class="read-more"><a href="{{ post.url }}" title="{{ post.title }}">There's more? Yes! Let's go. »</a></div>
+      </div>
+    </div>
+
+  {% endfor %}
+
+</div>
+</div>

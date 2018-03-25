@@ -4,7 +4,7 @@
 	
 		
 			<url>
-	<loc>http://bitjosef.github.io/books/2016/12/12/book-review-Science-of-Writing-Malware-and-Bugging.html</loc>
+	<loc>http://bitjosef.github.io/bitjosef/projects/2018/02/10/maycentral.html</loc>
 	
 	
 </url>
@@ -12,7 +12,7 @@
 	
 		
 			<url>
-	<loc>http://bitjosef.github.io/projects/2015/06/07/comrade-connect-and-collaborate.html</loc>
+	<loc>http://bitjosef.github.io/bitjosef/projects/2018/01/30/kuzabiz-in-blockchain.html</loc>
 	
 	
 </url>
@@ -20,7 +20,95 @@
 	
 		
 			<url>
-	<loc>http://bitjosef.github.io/projects/2014/01/01/internet-of-cards.html</loc>
+	<loc>http://bitjosef.github.io/bitjosef/blog/2018/01/03/java-wrapper-for-windows-biometric-framework.html</loc>
+	
+	
+</url>
+	    
+	
+		
+			<url>
+	<loc>http://bitjosef.github.io/bitjosef/blog/2017/08/08/map-of-kenya-election-2017.html</loc>
+	
+	
+</url>
+	    
+	
+		
+			<url>
+	<loc>http://bitjosef.github.io/bitjosef/blog/2017/08/08/voter-shift-elections-2017.html</loc>
+	
+	
+</url>
+	    
+	
+		
+			<url>
+	<loc>http://bitjosef.github.io/bitjosef/projects/2017/06/01/sidehustle-for-students.html</loc>
+	
+	
+</url>
+	    
+	
+		
+			<url>
+	<loc>http://bitjosef.github.io/bitjosef/projects/2017/04/01/socialcart-with-price-comparison.html</loc>
+	
+	
+</url>
+	    
+	
+		
+			<url>
+	<loc>http://bitjosef.github.io/bitjosef/projects/2017/03/10/teamdigital-app-tracks-digital-marketing-campaigns.html</loc>
+	
+	
+</url>
+	    
+	
+		
+			<url>
+	<loc>http://bitjosef.github.io/bitjosef/tutorials/2016/12/12/jekyll-tutorial.html</loc>
+	
+	
+</url>
+	    
+	
+		
+			<url>
+	<loc>http://bitjosef.github.io/bitjosef/books/2016/12/12/book-review-Science-of-Writing-Malware-and-Bugging.html</loc>
+	
+	
+</url>
+	    
+	
+		
+			<url>
+	<loc>http://bitjosef.github.io/bitjosef/blog/2016/12/12/extending-alljoyn-using-mqtt.html</loc>
+	
+	
+</url>
+	    
+	
+		
+			<url>
+	<loc>http://bitjosef.github.io/bitjosef/projects/2015/06/07/peerversity-connect-and-collaborate.html</loc>
+	
+	
+</url>
+	    
+	
+		
+			<url>
+	<loc>http://bitjosef.github.io/bitjosef/blog/2015/02/15/how-to-improve-personal-productivity-using-scrum.html</loc>
+	
+	
+</url>
+	    
+	
+		
+			<url>
+	<loc>http://bitjosef.github.io/bitjosef/projects/2014/01/01/internet-of-cards.html</loc>
 	
 	
 </url>
@@ -30,7 +118,7 @@
 	
 		
 			<url>
-	<loc>http://bitjosef.github.io/books.html</loc>
+	<loc>http://bitjosef.github.io/bitjosef/about.html</loc>
 	
 	
 </url>
@@ -38,7 +126,7 @@
 	
 		
 			<url>
-	<loc>http://bitjosef.github.io/contact.html</loc>
+	<loc>http://bitjosef.github.io/bitjosef/contact.html</loc>
 	
 	
 </url>
@@ -46,7 +134,7 @@
 	
 		
 			<url>
-	<loc>http://bitjosef.github.io/education.html</loc>
+	<loc>http://bitjosef.github.io/bitjosef/blog/</loc>
 	
 	
 </url>
@@ -54,7 +142,7 @@
 	
 		
 			<url>
-	<loc>http://bitjosef.github.io/blog/articles/</loc>
+	<loc>http://bitjosef.github.io/bitjosef/projects/</loc>
 	
 	
 </url>
@@ -62,7 +150,7 @@
 	
 		
 			<url>
-	<loc>http://bitjosef.github.io/blog/projects/</loc>
+	<loc>http://bitjosef.github.io/bitjosef/tutorials/</loc>
 	
 	
 </url>
@@ -70,49 +158,27 @@
 	
 		
 			<url>
-	<loc>http://bitjosef.github.io/blog/books/</loc>
+	<loc>http://bitjosef.github.io/bitjosef/</loc>
 	
 	
-</url>
-		
-	
-		
-			<url>
-	<loc>http://bitjosef.github.io/</loc>
-	
-	
-</url>
-		
-	
-		
-	
-		
-			<url>
-	<loc>http://bitjosef.github.io/portfolio.html</loc>
-	
+		<priority>1.0</priority>
 	
 </url>
 		
 	
 		
 			<url>
-	<loc>http://bitjosef.github.io/programmer.html</loc>
+	<loc>http://bitjosef.github.io/bitjosef/books/</loc>
 	
 	
 </url>
 		
 	
 		
-			<url>
-	<loc>http://bitjosef.github.io/projects.html</loc>
-	
-	
-</url>
-		
 	
 		
 			<url>
-	<loc>http://bitjosef.github.io/resume.html</loc>
+	<loc>http://bitjosef.github.io/bitjosef/portfolio.html</loc>
 	
 	
 </url>

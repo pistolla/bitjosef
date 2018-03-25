@@ -1,0 +1,35 @@
+
+<div id="cssmenu" class="sidebar-nav">
+	{% for category in site.categories %}
+		<button class="accordion {% if (page.url contains category[0])%} active {% endif %}">
+			{{category[0]}}
+		</button>
+		<div class="accordion-panel" {% if (page.url contains category[0])%} style="display: block;"  {% endif %}>
+			<ul>
+				{% for post in site.posts %}
+					{% if(post.category == category[0])%}
+					<li>
+						<a href="{{site.baseurl}}{{post.url}}" class="{% if (page.url == post.url)%} active {% endif %}">{{post.title}}</a>
+					</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	{% endfor %}
+</div>
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+	for (i = 0; i < acc.length; i++){
+		acc[i].addEventListener("click", function(){
+			this.classList.toggle("active");
+			
+			var panel = this.nextElementSibling;
+			if(panel.style.display === "block"){
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		});
+	}
+</script>

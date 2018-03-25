@@ -1,176 +1,83 @@
 ---
 layout: default
-titleAfter: Software Developer, App developer, Data analyst,Web and Mobile app UI designer
-meta: Discover me through portfolio
+title: Index
+priority: 1.0
 ---
-	
-	<!--<h1>Joseph Kamau Portfolio</h1>-->
-	
-	<!--Main layout-->
-	<div class="container">
-	
-		<!--First row-->
-		<div class="row">
-			
-				<div class="jumbotron">
-					<div class="container">
-					<div class="col-md-4">
-							<img class="img-thumbnail img-responsive center-block img-fluid" src="{{site.baseurl}}/img/jumbotron/thumb_1.png"></img>
-					</div>
-					
-					<div class="col-md-8">
-						<h2 class="h2-responsive">Joseph Kamau</h2>
-						<h4>Web/Mobile app Developer | Data analyst | UI/UX designer</h4>
-						<br />
-						<blockquote><p><q>Welcome! I am excited you have visited my portfolio. Navigate through the pages to get acquainted on my skills. </q></p></blockquote>
-						<hr>
-						<div class="social-icons">
-							<span><a href="www.facebook.com/"><img src="{{site.baseurl}}/img/icons/icon-facebook.png" alt="Facebook" /></a></span>
-							<span><a href="www.google.com"><img src="{{site.baseurl}}/img/icons/icon-google.png" alt="g++" /></a></span>
-							<span><a href="www.twitter.com"><img src="{{site.baseurl}}/img/icons/icon-twitter.png" alt="Twitter" /></a></span>
-							<span><a href="www.linkedin.com"><img src="{{site.baseurl}}/img/icons/icon-linkedin.png" alt="LinkedIn" /></a></span>
-							
-							<span><a href="#" class="btn btn-primary waves-effect waves-light">Skip to Portfolio</a></span>
-						</div>
-						
-					</div>
-					</div>
-				</div>
-			
+
+<!--Main layout-->
+{% include header.html %}
+<div class="container">
+	<div class="first row">
+
+		{% for post in site.posts limit:1 %}
+
+		<div class="col-md-12">
+		  <md-card class="teaser">
+			<div class="keyword"><a href="/tags/{{ post.tags[0] | slugify }}/" class="tag-link">{{ post.tags[0] }}</a></div>
+			{% if (post.images) %}
+			<div class="image"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}"><img src="{{site.baseurl}}{{ post.images[0]['fullsize'] }}" /></a>
+			</div>
+			{% endif %}
+			<div class="title"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></div>
+			<div class="description">{{ post.description }}</div>
+			<div class="read-more"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">Read more »</a></div>
+		  </md-card>
 		</div>
-		<!--/.First row-->
-		
-		<hr class="extra-margins" style="width: 80%; color: #86C67C;" />
-		
-		<!--Second row-->
-		<div class="row">
-			<div class="col-md-12">
-				<h4>Present Day </h4>
-				<!--First columnn-->
-				<div class="col-md-4">
-					<div class="card">
-						<!--Card content-->
-                        <div class="card-block">
-                            <!--Title-->
-                            <h4 class="card-title">Workplace</h4>
-                            <dl>
-								<dt>Working Place:</dt>
-								<dd>Freelance</dd>
-								
-								<dt>Location:</dt>
-								<dd>Gilgil</dd>
-								
-								<dt>Projects:</dt>
-								<dd>Wordpress website</dd>
-							</dl>
-                            <a href="#" class="btn btn-primary waves-effect waves-light">Read more</a>
-                        </div>
-                        <!--/.Card content-->
-					</div>
-				</div>
-				<!-- endFirst column-->
-				
-				<!--Second columnn-->
-				<div class="col-md-8">
-					<!--Map container-->
-					<div id="map-container" class="z-depth-1 wow fadeInUp" style="height: 300px"></div>
-				</div>
-				<!-- endSecond column-->
-			</div>
-		</div>
-		
-		<hr class="extra-margins" style="width: 80%; color: #86C67C;" />
-		
-		<div class="row">
-			<h4>Past Workplaces and Teams</h4>
-			
-			<!--First columnn-->
-			<div class="col-lg-4">
-				<!--Card-->
-				<div class="card">
-
-					<!--Card image-->
-					<div class="view overlay hm-white-slight">
-						<img src="Material%20Design%20Bootstrap_files/img%25202.jpg" class="img-fluid" alt="">
-						<a href="#">
-							<div class="mask waves-effect waves-light"></div>
-						</a>
-					</div>
-					<!--/.Card image-->
-
-					<!--Card content-->
-					<div class="card-block">
-						<!--Title-->
-						<h4 class="card-title">Card title</h4>
-						<!--Text-->
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary waves-effect waves-light">Read more</a>
-					</div>
-					<!--/.Card content-->
-
-				</div>
-				<!--/.Card-->
-			</div>
-			<!--First columnn-->
-			
-			<!--Second columnn-->
-			<div class="col-lg-4">
-				<!--Card-->
-				<div class="card">
-
-					<!--Card image-->
-					<div class="view overlay hm-white-slight">
-						<img src="Material%20Design%20Bootstrap_files/img%25202.jpg" class="img-fluid" alt="">
-						<a href="#">
-							<div class="mask waves-effect waves-light"></div>
-						</a>
-					</div>
-					<!--/.Card image-->
-
-					<!--Card content-->
-					<div class="card-block">
-						<!--Title-->
-						<h4 class="card-title">Card title</h4>
-						<!--Text-->
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary waves-effect waves-light">Read more</a>
-					</div>
-					<!--/.Card content-->
-
-				</div>
-				<!--/.Card-->
-			</div>
-			<!--Second columnn-->
-			
-			<!--Third columnn-->
-			<div class="col-lg-4">
-				<!--Card-->
-				<div class="card">
-
-					<!--Card image-->
-					<div class="view overlay hm-white-slight">
-						<img src="Material%20Design%20Bootstrap_files/img%25202.jpg" class="img-fluid" alt="">
-						<a href="#">
-							<div class="mask waves-effect waves-light"></div>
-						</a>
-					</div>
-					<!--/.Card image-->
-
-					<!--Card content-->
-					<div class="card-block">
-						<!--Title-->
-						<h4 class="card-title">Card title</h4>
-						<!--Text-->
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary waves-effect waves-light">Read more</a>
-					</div>
-					<!--/.Card content-->
-
-				</div>
-				<!--/.Card-->
-			</div>
-			<!--Third columnn-->
-		</div>
-		
-		
+		{% endfor %}
 	</div>
+	&nbsp;
+	<div class="second row">
+		{% for post in site.posts limit:2 offset:1 %}
+
+		<div class="col-md-6">
+		  <md-card class="teaser">
+			<div class="keyword"><a href="/tags/{{ post.tags[0] | slugify }}/" class="tag-link">{{ post.tags[0] }}</a></div>
+			{% if (post.images) %}
+			<div class="image"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}"><img src="{{site.baseurl}}{{ post.images[0]['fullsize'] }}" /></a>
+			</div>
+			{% endif %}
+			<div class="title"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></div>
+			<div class="description">{{ post.description }}</div>
+			<div class="read-more"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">Read more »</a></div>
+		  </md-card>
+		</div>
+		{% endfor %}
+
+	</div>
+	&nbsp;
+	<div class="third row">
+		{% for post in site.posts limit:4 offset:3 %}
+
+		<div class="col-md-3">
+		  <md-card class="teaser">
+			<div class="keyword"><a href="/tags/{{ post.tags[0] | slugify }}/" class="tag-link">{{ post.tags[0] }}</a></div>
+			{% if (post.images) %}
+			<div class="image"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}"><img src="{{site.baseurl}}{{ post.images[0]['fullsize'] }}" /></a>
+			</div>
+			{% endif %}
+			<div class="title"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></div>
+			<div class="description">{{ post.description }}</div>
+			<div class="read-more"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">Read more »</a></div>
+		  </md-card>
+		</div>
+		{% endfor %}
+	</div>
+	&nbsp;
+	<div class="fourth row">
+		{% for post in site.posts limit:4 offset:7 %}
+
+		<div class="col-md-3">
+		  <md-card class="teaser">
+			<div class="keyword"><a href="/tags/{{ post.tags[0] | slugify }}/" class="tag-link">{{ post.tags[0] }}</a></div>
+			{% if (post.images) %}
+			<div class="image"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}"><img src="{{site.baseurl}}{{ post.images[0]['fullsize'] }}" /></a>
+			</div>
+			{% endif %}
+			<div class="title"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></div>
+			<div class="description">{{ post.description }}</div>
+			<div class="read-more"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">Read more »</a></div>
+		  </md-card>
+		</div>
+		{% endfor %}
+	</div>
+</div>

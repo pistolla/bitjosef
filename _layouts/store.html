@@ -1,0 +1,193 @@
+---
+layout: default
+title: MyAppStore
+---
+
+<div class="row">
+    
+    <div class="col-md-8">
+        <div id="main">
+			<h3 class="title">{{ page.title }}</h3>
+			<div class="row meta">
+				<div class="col-md-9">
+					<div class="row" >
+						<img class="col-md-2 img-rounded info" src="{{site.baseurl}}{{ page.images[0]['logo'] }}" width="65" height="65"/>
+						<div class="col-md-10 info" style="display: inline-block;">
+							
+							{% for tag in page.tags %}
+								<span class="badge badge-pill indigo" style="padding: 5px; color: #ffffff;">{{tag | tag_links}}</span>
+							{% endfor %}
+							<div class="pull-right">{% include sharing.html %}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% if (page.images[0]['fullsize']) %}
+            <div class="image main"><img src="{{site.baseurl}}{{ page.images[0]['fullsize'] }}" style="width: 100%"/></div>
+			{% endif %}
+			<div class="row">
+				<div class="pull-right">
+					{% if (page.store[0]['local']) %}
+					<a href="{{ page.store[0]['local'] }}" class="btn btn-success ">Download latest version</a>
+					{% endif %}
+					{% if (page.store[0]['google']) %}
+					<a href="{{ page.store[0]['google'] }}" ><img src="{{site.baseurl}}/img/icons/icon-google-play.png" alt="google-play-download" width="150" height="70" /></a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		&nbsp;
+		<div class="row">
+			<!--Carousel Wrapper-->
+			<div id="preview-screenshot" class="carousel slide carousel-multi-item" data-ride="carousel">
+				<!--Indicators-->
+				<ol class="carousel-indicators">
+					<li data-target="#preview-screenshot" data-slide-to="0"  class="active">  </li>
+					<li data-target="#preview-screenshot" data-slide-to="1"  class="active">  </li>
+					<li data-target="#preview-screenshot" data-slide-to="2"  class="active">  </li>
+				</ol>
+				<!--/.Indicators-->
+				
+				<!--Slides-->
+				<div class="carousel-inner" role="listbox">
+					{% if (page.screenshots) %}
+							{% for shot in page.screenshots offset:3 %} 
+							<!-- slide -->
+							<div class="carousel-item {% if(page.screenshots[0] == shot)%} active {% endif %}">
+								{% for screenshot in page.screenshots limit:3 %}
+								<div class="col-md-4 {% if(page.screenshots[0] != screenshot)%} clearfix d-none d-md-block {% endif %}">
+									<!--Mask color-->
+									<div class="view">
+										<img class="img-fluid" src="{{site.baseurl}}{{screenshot}}" alt="screenshot"/>
+										
+										<div class mask="rgba-indigo-light"></div>
+									</div>
+									<!--Caption-->
+									<div class="carousel-caption">
+										<div class animated="fadeInDown">
+										<h3 class="h3-responsive">{{page.title}}</h3 >
+										<p>{{page.title}}</p>
+										</div >
+									</div >
+									<!--Caption-->
+								</div>
+								{% endfor %}
+							</div>
+							{% endfor %}
+					{% endif %}
+					<!--/.Slides-->
+					<!--Controls-->
+					<a class="carousel-control-prev" href="#preview-screenshot" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">  </span>
+					</a>
+					<a class="carousel-control-next" href="#preview-screenshot" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only"></span>
+					</a>
+					<!--/.Controls-->
+				</div>
+				<!--Carousel Wrapper-->
+			</div>
+		</div>
+		&nbsp;
+		<div class="row">
+			
+		</div>
+		&nbsp;
+		<div class="content">
+          
+            {{ content }}
+          
+            {% if page.series %}
+			<div class="next-box">
+                <div class="help">This post is part of a series called...</div>
+                <div class="series-title">{{ page.series.name }}</div>
+                
+                {% if page.next %}
+                <div class="help">The next in the series is...</div>
+                <div class="series-item">
+					<div class="title"><a href="{{ page.next.url }}">{{ page.next.title }}</a></div>
+					<div class="info">{{ page.next.description }}</div>
+					<div class="next-link"><a href="{{ page.next.url }}">Read the next post in the series >></a></div>
+                </div>
+                {% endif %}
+                
+		    </div>
+
+            {% endif %}
+          
+		</div>
+		&nbsp;
+		{% include comments.html %}
+		&nbsp;
+	</div>
+	<div class="col-md-1"></div>
+	<div class="col-md-3">
+	    <div id="sidebar">
+
+          {% include search.html %}
+		  <div class="header">More Apps</div>
+			&nbsp;
+          {% if page.photoset %}
+          <div class="photo-thumbnails">         
+            <div class="header">Photos!</div>
+            <div class="list">
+              {% for photo in page.photos %}
+
+                {% capture modulo %}{{ forloop.index | modulo: 2 }}{% endcapture %}
+
+                {% if (forloop.first) or (modulo == '1') %}
+                  <div class="row">
+                {% endif %}
+                
+                  <div class="span2"><a href="{{ photo.urlFullSize }}" title="{{ photo.title }}" rel="shadowbox[slideshow]" class="popupwindow" /><img src="{{ photo.urlThumbnail }}" alt="{{ photo.title }}"  class="{{ photo.thumbType }}"/></a></div>
+
+                {% if (modulo == '0') or (forloop.last) %}
+                  </div>
+                {% endif %}
+
+              {% endfor %}
+            </div>  
+          </div>
+          {% endif %}	
+    
+          {% if site.related_posts.length != 0 %}
+          <div class="teaser">
+            <div class="teaser-list">
+              {% for post in site.related_posts limit:4 %}
+			  {% if (post.category == 'projects') %}
+              <div class="teaser{% if (forloop.first) %} first{% endif %}">
+
+                {% if (post.images) %}
+  
+                  <div class="row">
+                    <div class="span1 "><div class="image"><a href="{{site.baseurl}}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.images[0]['thumbnail'] | format_teaser_image }}" /></a></div></div>
+                    <div class="span3">
+                      <div class="title"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></div>
+                      <div class="timestamp"><script language="javascript">document.write($.timeago('{{ post.date }}'))</script></div>
+                    </div>
+                  </div>
+  
+                {% else %}
+
+                  <div class="row">
+                    <div class="span4">
+                      <div class="title"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></div>
+                      <div class="timestamp"><script language="javascript">document.write($.timeago('{{ post.date }}'))</script></div>
+                    </div>
+                  </div>
+
+                {% endif %}
+
+              </div>
+			  <hr />
+			  {% endif %}
+              {% endfor %}
+              
+            </div>  
+          </div>
+          {% endif %}          
+
+        </div>
+	</div>

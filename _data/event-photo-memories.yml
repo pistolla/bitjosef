@@ -1,0 +1,20 @@
+- event: Clubbing
+  url: /img/album/someday.jpg
+  description: Partying like its hot
+  date: 2018-03-09
+  
+- event: Hackathon 1
+  url: /img/album/someday.jpg
+  description: awesome night
+  date: 2018-03-09
+  
+- event: Hackathon 2
+  url: /img/album/someday.jpg
+  description: no deliverables
+  date: 2018-03-09
+  
+- event: Hackathon 3
+  url: /img/album/someday.jpg
+  description: Epic hackathon
+  date: 2018-03-09
+  

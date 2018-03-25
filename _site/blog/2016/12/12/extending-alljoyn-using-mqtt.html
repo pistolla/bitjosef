@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	
+	<title>Joseph Kamau</title>
+	
+	<meta name="description" content="Connect p2p network realtime">
+	<meta property="og:site_name" content="Dataphile Joe"/>
+	<meta property="og:title" content="Extending Alljoyn using MQTT"/>
+	<meta property="og:description" content="Alljoyn platform allows proximal devices to advertise presence, discover and connect. MQTT is lightweight realtime transport services that can extend Alljoyn over internet."/>
+	
+
+	<meta property="twitter:card" content="summary" />
+	<meta property="twitter:creator" content="@pinkissme" />
+	<meta property="twitter:url" content="/blog/2016/12/12/extending-alljoyn-using-mqtt.html" />
+	<meta property="twitter:title" content="Extending Alljoyn using MQTT" />
+	
+	<meta property="twitter:description" content="Alljoyn platform allows proximal devices to advertise presence, discover and connect. MQTT is lightweight realtime transport services that can extend Alljoyn over internet." />
+	
+	
+	
+	<link href="/bitjosef/css/main.css" rel="stylesheet">
+	<!-- Font Awesome -->
+    <link rel="stylesheet" href="/bitjosef/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bitjosef/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="/bitjosef/css/mdb.min.css" rel="stylesheet">
+
+    <!-- Your custom styles (optional) -->
+    <link href="/bitjosef/css/style.css" rel="stylesheet">
+	
+	<!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+        
+        main {
+            padding-bottom: 2rem;
+        }
+        
+        .extra-margins {
+            margin-top: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        
+    </style>
+	
+</head>
+<body>
+
+	<header>
+		<!--Navbar-->
+        <nav class="navbar navbar-dark primary-color-dark navbar-fixed-top">
+
+            <!-- Collapse button-->
+            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="container">
+
+                <!--Collapse content-->
+                <div class="collapse navbar-toggleable-xs navbar-right" id="collapseEx">
+					<a  href="/bitjosef/"><img class="navbar-brand waves-effect waves-light" alt="Dataphile" src="/bitjosef/img/masthead/dlogo.png" height="43" width="150" ></a></img>
+					<ul class="nav navbar-nav pull-right">
+	<li class="nav-item "><a href="/bitjosef/" class="navbar-brand waves-effect waves-light ">Home</a></li>
+	<li class="nav-item "><a href="/bitjosef/portfolio.html" class="navbar-brand waves-effect waves-light">Portfolio</a></li>
+	
+	<li class="nav-item "><a href="/bitjosef/about.html" class="navbar-brand waves-effect waves-light">About</a></li>
+</ul> 
+				</div>
+                <!--/.Collapse content-->
+
+            </div>
+
+        </nav>
+        <!--/.Navbar-->
+	
+	</header>
+	<!--wrapper -->
+	<main id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper" class="blue">
+			
+<div id="cssmenu" class="sidebar-nav">
+	
+		<button class="accordion ">
+			projects
+		</button>
+		<div class="accordion-panel" >
+			<ul>
+				
+					
+					<li>
+						<a href="/bitjosef/projects/2018/02/10/maycentral.html" class="">MAYCentral App</a>
+					</li>
+					
+				
+					
+					<li>
+						<a href="/bitjosef/projects/2018/01/30/kuzabiz-in-blockchain.html" class="">Kuzabiz App</a>
+					</li>
+					
+				
+					
+				
+					
+				
+					
+				
+					
+					<li>
+						<a href="/bitjosef/projects/2017/06/01/sidehustle-for-students.html" class="">SideHustle App</a>
+					</li>
+					
+				
+					
+					<li>
+						<a href="/bitjosef/projects/2017/04/01/socialcart-with-price-comparison.html" class="">SocialCart App</a>
+					</li>
+					
+				
+					
+					<li>
+						<a href="/bitjosef/projects/2017/03/10/teamdigital-app-tracks-digital-marketing-campaigns.html" class="">TeamDigital App</a>
+					</li>
+					
+				
+					
+				
+					
+				
+					
+				
+					
+					<li>
+						<a href="/bitjosef/projects/2015/06/07/peerversity-connect-and-collaborate.html" class="">Peerversity platform</a>
+					</li>
+					
+				
+					
+				
+					
+					<li>
+						<a href="/bitjosef/projects/2014/01/01/internet-of-cards.html" class="">Internet of Cards</a>
+					</li>
+					
+				
+			</ul>
+		</div>
+	
+		<button class="accordion  active ">
+			blog
+		</button>
+		<div class="accordion-panel"  style="display: block;"  >
+			<ul>
+				
+					
+				
+					
+				
+					
+					<li>
+						<a href="/bitjosef/blog/2018/01/03/java-wrapper-for-windows-biometric-framework.html" class="">Java wrapper for Windows Biometric Framework</a>
+					</li>
+					
+				
+					
+					<li>
+						<a href="/bitjosef/blog/2017/08/08/map-of-kenya-election-2017.html" class="">Kenya 2017 Elections</a>
+					</li>
+					
+				
+					
+					<li>
+						<a href="/bitjosef/blog/2017/08/08/voter-shift-elections-2017.html" class="">Voter Shift elections 2017</a>
+					</li>
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+					<li>
+						<a href="/bitjosef/blog/2016/12/12/extending-alljoyn-using-mqtt.html" class=" active ">Extending Alljoyn using MQTT</a>
+					</li>
+					
+				
+					
+				
+					
+					<li>
+						<a href="/bitjosef/blog/2015/02/15/how-to-improve-personal-productivity-using-scrum.html" class="">How to improve personal productivity using Scrum</a>
+					</li>
+					
+				
+					
+				
+			</ul>
+		</div>
+	
+		<button class="accordion ">
+			books
+		</button>
+		<div class="accordion-panel" >
+			<ul>
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+					<li>
+						<a href="/bitjosef/books/2016/12/12/book-review-Science-of-Writing-Malware-and-Bugging.html" class="">Science of writing Malware and bugging</a>
+					</li>
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+			</ul>
+		</div>
+	
+		<button class="accordion ">
+			tutorials
+		</button>
+		<div class="accordion-panel" >
+			<ul>
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+					<li>
+						<a href="/bitjosef/tutorials/2016/12/12/jekyll-tutorial.html" class="">Science of writing Malware and bugging</a>
+					</li>
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+			</ul>
+		</div>
+	
+</div>
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+	for (i = 0; i < acc.length; i++){
+		acc[i].addEventListener("click", function(){
+			this.classList.toggle("active");
+			
+			var panel = this.nextElementSibling;
+			if(panel.style.display === "block"){
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		});
+	}
+</script>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+    
+    <div class="col-md-8">
+        <div id="main">
+			<h3 class="title">Extending Alljoyn using MQTT</h3>
+			<div class="meta">
+				<div class="row">
+					<div class="col-md-9">
+						<div class="info">
+						2016-12-12 00:00:00 +0300 - 
+							
+								<span class="badge badge-pill indigo" style="padding: 5px; color: #ffffff;">Alljoyn</span>
+							
+								<span class="badge badge-pill indigo" style="padding: 5px; color: #ffffff;">MQTT</span>
+							
+						</div>
+					</div>
+					<div class="col-md-3"><div id="share-links">
+  <!-- AddThis Button BEGIN -->
+  <div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    <a class="addthis_button_tweet"></a>
+  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d41e38b0a4b3b1e"></script>
+  <!-- AddThis Button END -->
+</div>
+</div>
+				</div>
+			</div>
+          
+			
+
+			<div class="content">
+          
+            <p>Demystifying and counter attacking hacker attempt of using malware to compromise a system.</p>
+
+          
+            
+          
+        </div>
+  
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+   
+   var disqus_shortname = 'dataphile';
+   var disqus_identifier = '/blog/2016/12/12/extending-alljoyn-using-mqtt';
+   var disqus_url = '/bitjosef/blog/2016/12/12/extending-alljoyn-using-mqtt.html/index.html';
+
+   (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </div>
+    </div>
+	<div class="col-md-2"></div>
+	<div class="col-md-3">
+	    <div id="sidebar">
+
+          <div id="search">
+  <form method="get" class="form-search">
+    <input type="text" name="search-text" placeholder="search.." id="search-text">
+  </form>
+</div>
+
+          	
+    
+          
+          <div class="teaser">
+            <div class="header">Similar Posts maybe?</div>
+            <div class="teaser-list">
+
+              
+			  
+              
+			  
+              
+			  
+              <div class="teaser">
+
+                
+
+                  <div class="row">
+                    <div class="span4">
+                      <div class="title"><a href="/bitjosef/blog/2018/01/03/java-wrapper-for-windows-biometric-framework.html">Java wrapper for Windows Biometric Framework</a></div>
+                      <div class="description">Wrapping WBF with Java wrapper to enable biometric fingerprint scanner to communicate with Windows operating system using Java language.</div>
+                      <div class="timestamp"><script language="javascript">document.write($.timeago('2018-01-03 00:00:00 +0300'))</script></div>
+                    </div>
+                  </div>
+
+                
+
+              </div>
+			  
+              
+			  
+              <div class="teaser">
+
+                
+
+                  <div class="row">
+                    <div class="span4">
+                      <div class="title"><a href="/bitjosef/blog/2017/08/08/map-of-kenya-election-2017.html">Kenya 2017 Elections</a></div>
+                      <div class="description">Kenya 2017 elections analysis and compared with previous elections. The data is acquired from IEBC api and</div>
+                      <div class="timestamp"><script language="javascript">document.write($.timeago('2017-08-08 00:00:00 +0300'))</script></div>
+                    </div>
+                  </div>
+
+                
+
+              </div>
+			  
+              
+			  
+              <div class="teaser">
+
+                
+  
+                  <div class="row">
+                    <div class="span1 "><div class="image"><a href="/bitjosef/blog/2017/08/08/voter-shift-elections-2017.html"><img src="/bitjosef/img/content/anaconda-thumb.png" /></a></div></div>
+                    <div class="span3">
+                      <div class="title"><a href="/bitjosef/blog/2017/08/08/voter-shift-elections-2017.html">Voter Shift elections 2017</a></div>
+                      <div class="description">This file is inside _posts/, category is undefined purposely. The "special" field holds the information for creating the sub items. The fist element is the parent menu, the second element is optional and is used for creating the child menu. Lorem ipsum dolor sit amet...</div>
+                      <div class="timestamp"><script language="javascript">document.write($.timeago('2017-08-08 00:00:00 +0300'))</script></div>
+                    </div>
+                  </div>
+  
+                
+
+              </div>
+			  
+              
+			  
+              
+              
+            </div>  
+          </div>
+                    
+
+        </div>
+	</div>
+			</div>
+		</div>
+		<!-- /#page-content-wrapper -->
+	</main>
+	<!-- /#wrapper -->
+	
+	
+	<!--Footer-->
+	<footer class="page-footer blue center-on-small-only">
+		<!--Footer Links-->
+		<div class="container-fluid">
+			<div class="row">
+				<!--First column-->
+				<div class="col-md-4">
+					<h5 class="title">Footer Content</h5>
+					<p>Good reputation is better than a good name.</p>
+				</div>
+				<!--/.First column-->
+				<!--Second column-->
+				<div class="col-md-4">
+					<h5 class="title social-section">Links</h5>
+					<ul class="nav navbar-nav pull-right">
+	<li class="nav-item "><a href="/bitjosef/" class="navbar-brand waves-effect waves-light ">Home</a></li>
+	<li class="nav-item "><a href="/bitjosef/portfolio.html" class="navbar-brand waves-effect waves-light">Portfolio</a></li>
+	
+	<li class="nav-item "><a href="/bitjosef/about.html" class="navbar-brand waves-effect waves-light">About</a></li>
+</ul> 
+				</div>
+				<!--/.Second column-->
+				<!--Third column-->
+				<div class="col-md-4">
+					<h5 class="title">Address</h5>
+					<ul class="text-xs-left">
+	<li class="wow fadeInUp" data-wow-delay="0.2s"><i class="fa fa-map-marker"></i>
+		<p>Gilgil, 20116, KENYA</p>
+	</li>
+
+	<li class="wow fadeInUp" data-wow-delay="0.3s"><i class="fa fa-phone"></i>
+		<p>+ 254 716 365 943</p>
+	</li>
+
+	<li class="wow fadeInUp" data-wow-delay="0.4s"><i class="fa fa-envelope"></i>
+		<p>bitjosef@hotmail.com</p>
+	</li>
+</ul>
+				</div>
+				<!--/.Third column-->
+			</div>
+		</div>
+		<!--/.Footer Links-->
+		<!--Copyright-->
+		<div class="footer-copyright">
+			<div class="container-fluid">
+				© 2016 Copyright: <a href="/bitjosef/">Joseph Kamau</a>
+			</div>
+		</div>
+		<!--/.Copyright-->
+	</footer>
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="/bitjosef/js/jquery.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/bitjosef/js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/bitjosef/js/bootstrap.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/bitjosef/js/mdb.min.js"></script>
+	
+	<!-- Menu Toggle Script -->
+	<script>
+		(function($){
+			$("#wrapper").addClass("toggled");
+			$("#menu-toggle").click(function(e) {
+				e.preventDefault();
+				$("#wrapper").toggleClass("toggled");
+			});
+		})(jQuery);
+	</script>
+</body>
+</html
