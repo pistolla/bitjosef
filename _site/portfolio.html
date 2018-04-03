@@ -22,7 +22,7 @@
 	
 	<link href="/bitjosef/css/main.css" rel="stylesheet">
 	<!-- Font Awesome -->
-    <link rel="stylesheet" href="/bitjosef/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/bitjosef/font/font-awesome/css/font-awesome.min.css">
 
     <!-- Bootstrap core CSS -->
     <link href="/bitjosef/css/bootstrap.min.css" rel="stylesheet">
@@ -54,17 +54,16 @@
 
 	<header>
 		<!--Navbar-->
-        <nav class="navbar navbar-dark primary-color-dark navbar-fixed-top">
-
-            <!-- Collapse button-->
-            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
-                <i class="fa fa-bars"></i>
-            </button>
-
+        <nav class="navbar navbar-dark primary-color-dark navbar-fixed-top" style="display: inline-block;">
             <div class="container">
-
+				<a href="#" data-activates="sidebar-wrapper" class="btn p-0 button-collapse pull-left" style="margin-top: 10px; margin-right: 40px;"><i class="fa fa-bars"></i></a>
+				<!-- Collapse button-->
+				<button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapseEx">
+					<i class="fa fa-bars"></i>
+				</button>
                 <!--Collapse content-->
                 <div class="collapse navbar-toggleable-xs navbar-right" id="collapseEx">
+					
 					<a  href="/bitjosef/"><img class="navbar-brand waves-effect waves-light" alt="Dataphile" src="/bitjosef/img/masthead/dlogo.png" height="43" width="150" ></a></img>
 					<ul class="nav navbar-nav pull-right">
 	<li class="nav-item "><a href="/bitjosef/" class="navbar-brand waves-effect waves-light ">Home</a></li>
@@ -85,7 +84,7 @@
 	<main id="wrapper">
 
 		<!-- Sidebar -->
-		<div id="sidebar-wrapper" class="blue">
+		<div id="sidebar-wrapper" class="side-nav fixed orange">
 			
 <div id="cssmenu" class="sidebar-nav">
 	
@@ -350,16 +349,17 @@
 						<!--Credentials -->
 						<h4 class="card-title">Contact info</h4>
 						<div class="row">
-							<div class="col-md-6">
-								<div class="center-block">
+							<div class="col-md-6" >
+								<div class="center-block" style="text-align: center;">
+									<img class="img-rounded" src="" alt="Joseph Kamau" width="85" height="85"/>
 									<h5>Joseph Kamau</h5>
-									<p>+254 716 36 59 43</p>
-									<p>bitjosef@hotmail.com</p>
+									<p><i class="fa fa-phone"></i> +254 716 36 59 43</p>
+									<p><i class="fa fa-envelope"></i> bitjosef@hotmail.com</p>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<h5>399, 20116 Gilgil. Kenya</h5>
-								<p>Gilgil Town</p>
+							<div class="col-md-6" style="text-align:left;">
+								<p><i class="fa fa-map-marker"></i> 399, 20116 Gilgil. Kenya</p>
+								<p><i class="fa fa-map-marker"></i> Gilgil Town</p>
 							</div>
 						</div>
 					</div>
@@ -371,26 +371,30 @@
 						<h4 class="card-title"> Experience</h4>
 						<dl>
 							
-								<dt>Internship</dt>
+								<dd><strong>Position: </strong>Internship</dd>
 								<dd><strong>Company: </strong>Egerton University Nakuru TownCampus (2010/09 - 2011/03)</dd>
+								<dd><strong>Responsibilities: </strong>Computer Lab, support practical classes</dd>
 						</dl>
-						<p><strong>Responsibilities: </strong>Computer Lab, support practical classes</p>
-							
-								<dt>Internship</dt>
+						<hr />
+						
+								<dd><strong>Position: </strong>Internship</dd>
 								<dd><strong>Company: </strong>Tracom College Nakuru (2014/03 - 2014/08)</dd>
+								<dd><strong>Responsibilities: </strong>Computer Lab, supports practical classes</dd>
 						</dl>
-						<p><strong>Responsibilities: </strong>Computer Lab, supports practical classes</p>
-							
-								<dt>Freelance</dt>
+						<hr />
+						
+								<dd><strong>Position: </strong>Freelance</dd>
 								<dd><strong>Company: </strong>UPWORK.COM, HOMEWORKMARKET.COM, KUHUSTLE.COM (2015 - present)</dd>
+								<dd><strong>Responsibilities: </strong>Programming assignments, Research papers, Networking assignments, Math problems, Applications developments</dd>
 						</dl>
-						<p><strong>Responsibilities: </strong>Programming assignments, Research papers, Networking assignments, Math problems, Applications developments</p>
-							
-								<dt>Computer Technician</dt>
+						<hr />
+						
+								<dd><strong>Position: </strong>Computer Technician</dd>
 								<dd><strong>Company: </strong>Heritage Printing limited (2011/04 - 2011/09)</dd>
+								<dd><strong>Responsibilities: </strong>Front Desk, Bulk typesetting and printing, computer services</dd>
 						</dl>
-						<p><strong>Responsibilities: </strong>Front Desk, Bulk typesetting and printing, computer services</p>
-							
+						<hr />
+						
 					</div>
 				</div>
 				
@@ -571,44 +575,24 @@
 	
 	
 	<!--Footer-->
-	<footer class="page-footer blue center-on-small-only">
+	<footer class="page-footer orange center-on-small-only">
 		<!--Footer Links-->
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row" style="text-align: center;">
 				<!--First column-->
-				<div class="col-md-4">
-					<h5 class="title">Footer Content</h5>
-					<p>Good reputation is better than a good name.</p>
-				</div>
+				<div class="col-md-3"></div>
 				<!--/.First column-->
+				
 				<!--Second column-->
-				<div class="col-md-4">
-					<h5 class="title social-section">Links</h5>
-					<ul class="nav navbar-nav pull-right">
-	<li class="nav-item "><a href="/bitjosef/" class="navbar-brand waves-effect waves-light ">Home</a></li>
-	<li class="nav-item active"><a href="/bitjosef/portfolio.html" class="navbar-brand waves-effect waves-light">Portfolio</a></li>
-	
-	<li class="nav-item "><a href="/bitjosef/about.html" class="navbar-brand waves-effect waves-light">About</a></li>
-</ul> 
+				<div class="col-md-6">
+				
+					<h5 class="title">Quotes</h5>
+					<div class="blockquote blockquote-footer"><p>Time is money</p></div>
 				</div>
 				<!--/.Second column-->
+				
 				<!--Third column-->
-				<div class="col-md-4">
-					<h5 class="title">Address</h5>
-					<ul class="text-xs-left">
-	<li class="wow fadeInUp" data-wow-delay="0.2s"><i class="fa fa-map-marker"></i>
-		<p>Gilgil, 20116, KENYA</p>
-	</li>
-
-	<li class="wow fadeInUp" data-wow-delay="0.3s"><i class="fa fa-phone"></i>
-		<p>+ 254 716 365 943</p>
-	</li>
-
-	<li class="wow fadeInUp" data-wow-delay="0.4s"><i class="fa fa-envelope"></i>
-		<p>bitjosef@hotmail.com</p>
-	</li>
-</ul>
-				</div>
+				<div class="col-md-3"></div>
 				<!--/.Third column-->
 			</div>
 		</div>
@@ -639,11 +623,29 @@
 	<!-- Menu Toggle Script -->
 	<script>
 		(function($){
+			$(".button-collapse").click(function(){
+				console.log("Hide SideNav");
+				$('.button-collapse').sideNav("hide");
+			});
+			var waitForSideNav = function() {
+				console.log("waitForSideNav()");
+				if($.isFunction($(".button-collapse").sideNav)){
+				console.log("waitForSideNav() = true");
+					
+				} else {
+					console.log("setTimeout ");
+					<!-- setTimeout(waitForSideNav(), 1000); -->
+				}
+			}
+			waitForSideNav();
+			
+			
 			$("#wrapper").addClass("toggled");
 			$("#menu-toggle").click(function(e) {
 				e.preventDefault();
 				$("#wrapper").toggleClass("toggled");
 			});
+			
 		})(jQuery);
 	</script>
 </body>

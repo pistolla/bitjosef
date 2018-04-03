@@ -15,6 +15,7 @@ description: Kuzabiz is a distributed ecommerce application that harnesses the p
 images:
 - thumbnail: /img/content/cyber-thumb.jpg
   fullsize: /img/content/cyber.jpg
+  logo: /img/content/kuzabiz-logo.png
 ---
 
 Ubiquitous peer to peer application that allows student to connect seamlessly across devices. 

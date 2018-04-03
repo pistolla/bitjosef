@@ -29,7 +29,7 @@ title: Default
 	
 	<link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
 	<!-- Font Awesome -->
-    <link rel="stylesheet" href="{{site.baseurl}}/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/font/font-awesome/css/font-awesome.min.css">
 
     <!-- Bootstrap core CSS -->
     <link href="{{site.baseurl}}/css/bootstrap.min.css" rel="stylesheet">
@@ -61,17 +61,16 @@ title: Default
 
 	<header>
 		<!--Navbar-->
-        <nav class="navbar navbar-dark primary-color-dark navbar-fixed-top">
-
-            <!-- Collapse button-->
-            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
-                <i class="fa fa-bars"></i>
-            </button>
-
+        <nav class="navbar navbar-dark primary-color-dark navbar-fixed-top" style="display: inline-block;">
             <div class="container">
-
+				<a href="#" data-activates="sidebar-wrapper" class="btn p-0 button-collapse pull-left" style="margin-top: 10px; margin-right: 40px;"><i class="fa fa-bars"></i></a>
+				<!-- Collapse button-->
+				<button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapseEx">
+					<i class="fa fa-bars"></i>
+				</button>
                 <!--Collapse content-->
                 <div class="collapse navbar-toggleable-xs navbar-right" id="collapseEx">
+					
 					<a  href="{{site.baseurl}}/"><img class="navbar-brand waves-effect waves-light" alt="Dataphile" src="{{site.baseurl}}/img/masthead/dlogo.png" height="43" width="150" ></a></img>
 					{% include nav.html navclass="nav-top" %}
 				</div>
@@ -87,7 +86,7 @@ title: Default
 	<main id="wrapper">
 
 		<!-- Sidebar -->
-		<div id="sidebar-wrapper" class="blue">
+		<div id="sidebar-wrapper" class="side-nav fixed orange">
 			{% include sidenav.html %}
 		</div>
 		<!-- /#sidebar-wrapper -->
@@ -104,27 +103,24 @@ title: Default
 	
 	
 	<!--Footer-->
-	<footer class="page-footer blue center-on-small-only">
+	<footer class="page-footer orange center-on-small-only">
 		<!--Footer Links-->
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row" style="text-align: center;">
 				<!--First column-->
-				<div class="col-md-4">
-					<h5 class="title">Footer Content</h5>
-					<p>Good reputation is better than a good name.</p>
-				</div>
+				<div class="col-md-3"></div>
 				<!--/.First column-->
+				
 				<!--Second column-->
-				<div class="col-md-4">
-					<h5 class="title social-section">Links</h5>
-					{% include nav.html navclass="nav-bottom" %}
+				<div class="col-md-6">
+				
+					<h5 class="title">Quotes</h5>
+					<div class="blockquote blockquote-footer"><p>Time is money</p></div>
 				</div>
 				<!--/.Second column-->
+				
 				<!--Third column-->
-				<div class="col-md-4">
-					<h5 class="title">Address</h5>
-					{% include contact.html navclass="nav-bottom" %}
-				</div>
+				<div class="col-md-3"></div>
 				<!--/.Third column-->
 			</div>
 		</div>
@@ -155,11 +151,29 @@ title: Default
 	<!-- Menu Toggle Script -->
 	<script>
 		(function($){
+			$(".button-collapse").click(function(){
+				console.log("Hide SideNav");
+				$('.button-collapse').sideNav("hide");
+			});
+			var waitForSideNav = function() {
+				console.log("waitForSideNav()");
+				if($.isFunction($(".button-collapse").sideNav)){
+				console.log("waitForSideNav() = true");
+					
+				} else {
+					console.log("setTimeout ");
+					<!-- setTimeout(waitForSideNav(), 1000); -->
+				}
+			}
+			waitForSideNav();
+			
+			
 			$("#wrapper").addClass("toggled");
 			$("#menu-toggle").click(function(e) {
 				e.preventDefault();
 				$("#wrapper").toggleClass("toggled");
 			});
+			
 		})(jQuery);
 	</script>
 </body>

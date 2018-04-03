@@ -21,16 +21,17 @@ title: Print Resume
 						<!--Credentials -->
 						<h4 class="card-title">Contact info</h4>
 						<div class="row">
-							<div class="col-md-6">
-								<div class="center-block">
+							<div class="col-md-6" >
+								<div class="center-block" style="text-align: center;">
+									<img class="img-rounded" src="" alt="{{ site.data.resume-credentials[0].content }}" width="85" height="85"/>
 									<h5>{{ site.data.resume-credentials[0].content }}</h5>
-									<p>{{ site.data.resume-credentials[1].content }}</p>
-									<p>{{ site.data.resume-credentials[2].content }}</p>
+									<p><i class="fa fa-phone"></i> {{  site.data.resume-credentials[1].content }}</p>
+									<p><i class="fa fa-envelope"></i> {{ site.data.resume-credentials[2].content }}</p>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<h5>{{ site.data.resume-credentials[3].content }}</h5>
-								<p>{{ site.data.resume-credentials[4].content }}</p>
+							<div class="col-md-6" style="text-align:left;">
+								<p><i class="fa fa-map-marker"></i> {{ site.data.resume-credentials[3].content }}</p>
+								<p><i class="fa fa-map-marker"></i> {{ site.data.resume-credentials[4].content }}</p>
 							</div>
 						</div>
 					</div>
@@ -42,11 +43,12 @@ title: Print Resume
 						<h4 class="card-title"> Experience</h4>
 						<dl>
 							{% for o in site.data.resume-experience %}
-								<dt>{{ o.label }}</dt>
+								<dd><strong>Position: </strong>{{ o.label }}</dd>
 								<dd><strong>Company: </strong>{{ o.company }} ({{ o.begin }} - {{ o.end }})</dd>
+								<dd><strong>Responsibilities: </strong>{{ o.responsibilities }}</dd>
 						</dl>
-						<p><strong>Responsibilities: </strong>{{ o.responsibilities }}</p>
-							{% endfor %}
+						<hr />
+						{% endfor %}
 					</div>
 				</div>
 				
