@@ -52,7 +52,7 @@
 </head>
 <body>
 
-	<header>
+	<header class="row">
 		<!--Navbar-->
         <nav class="navbar navbar-dark primary-color-dark navbar-fixed-top" style="display: inline-block;">
             <div class="container">
@@ -64,7 +64,7 @@
                 <!--Collapse content-->
                 <div class="collapse navbar-toggleable-xs navbar-right" id="collapseEx">
 					
-					<a  href="/bitjosef/"><img class="navbar-brand waves-effect waves-light" alt="Dataphile" src="/bitjosef/img/masthead/dlogo.png" height="43" width="150" ></a></img>
+					<a  href="/bitjosef/"><img class="navbar-brand waves-effect waves-light" alt="Dataphile" src="/bitjosef/img/masthead/dlogo.png" height="43" width="150" /></a>
 					<ul class="nav navbar-nav pull-right">
 	<li class="nav-item active"><a href="/bitjosef/" class="navbar-brand waves-effect waves-light ">Home</a></li>
 	<li class="nav-item "><a href="/bitjosef/portfolio.html" class="navbar-brand waves-effect waves-light">Portfolio</a></li>
@@ -81,10 +81,10 @@
 	
 	</header>
 	<!--wrapper -->
-	<main id="wrapper">
+	<div id="wrapper">
 
 		<!-- Sidebar -->
-		<div id="sidebar-wrapper" class="side-nav fixed orange">
+		<div id="sidebar-wrapper" class="side-nav hidden-md-down fixed orange">
 			
 <div id="cssmenu" class="sidebar-nav">
 	
@@ -314,8 +314,7 @@
 
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
-			<div class="container-fluid">
-				<!--Main layout-->
+			<!--Main layout-->
 <div id="header">
     <div class="row">
 		<span class="col-md-9"><h4>Dataphile is the online portfolio of <a href="/bitjosefportfolio.html">Joseph Kamau</a> - a computer scientist who specializes in data analysis, software development and machine learning. I'm currently based in Nairobi, Kenya.</h4>
@@ -354,34 +353,18 @@
 </div>
 </div>
 
-			</div>
 		</div>
 		<!-- /#page-content-wrapper -->
-	</main>
+	</div>
 	<!-- /#wrapper -->
 	
 	
 	<!--Footer-->
-	<footer class="page-footer orange center-on-small-only">
+	<footer id="footer" class="page-footer orange ">
 		<!--Footer Links-->
-		<div class="container-fluid">
-			<div class="row" style="text-align: center;">
-				<!--First column-->
-				<div class="col-md-3"></div>
-				<!--/.First column-->
-				
-				<!--Second column-->
-				<div class="col-md-6">
-				
-					<h5 class="title">Quotes</h5>
-					<div class="blockquote blockquote-footer"><p>Time is money</p></div>
-				</div>
-				<!--/.Second column-->
-				
-				<!--Third column-->
-				<div class="col-md-3"></div>
-				<!--/.Third column-->
-			</div>
+		<div class="row" style="text-align: center;">
+			<h5 class="title">Quotes</h5>
+			<div class="blockquote blockquote-footer" style="color: #ffffff; font-size: 22px;"><p>Time is money</p></div>
 		</div>
 		<!--/.Footer Links-->
 		<!--Copyright-->
@@ -436,4 +419,4 @@
 		})(jQuery);
 	</script>
 </body>
-</html
+</html>

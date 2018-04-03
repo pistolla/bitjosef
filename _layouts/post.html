@@ -55,7 +55,7 @@ layout: default
     </div>
 	<div class="col-md-2"></div>
 	<div class="col-md-3">
-	    <div id="sidebar">
+	    <div id="sidebar" class="container-fluid">
 
           {% include search.html %}
 
@@ -71,7 +71,7 @@ layout: default
                   <div class="row">
                 {% endif %}
                 
-                  <div class="span2"><a href="{{ photo.urlFullSize }}" title="{{ photo.title }}" rel="shadowbox[slideshow]" class="popupwindow" /><img src="{{ photo.urlThumbnail }}" alt="{{ photo.title }}"  class="{{ photo.thumbType }}"/></a></div>
+                  <div class="span2"><a href="{{ photo.urlFullSize }}" title="{{ photo.title }}" rel="shadowbox[slideshow]" class="popupwindow" /><img src="{{ photo.urlThumbnail }}" alt="{{ photo.title }}"  class="img-fluid {{ photo.thumbType }}"/></a></div>
 
                 {% if (modulo == '0') or (forloop.last) %}
                   </div>
@@ -94,7 +94,7 @@ layout: default
                 {% if (post.images) %}
   
                   <div class="row">
-                    <div class="span1 "><div class="image"><a href="{{site.baseurl}}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.images[0]['thumbnail'] | format_teaser_image }}" /></a></div></div>
+                    <div class="span1 "><div class="image"><a href="{{site.baseurl}}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.images[0]['thumbnail'] | format_teaser_image }}" class="img-fluid" /></a></div></div>
                     <div class="span3">
                       <div class="title"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></div>
                       <div class="description">{{ post.description }}</div>

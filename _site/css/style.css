@@ -1,24 +1,14 @@
 /* YOUR CUSTOM STYLES */
 body {
 	padding-top: 50px;
-	/* overflow-x: hidden; */
+	min-height: 100vh;
 }
 
 footer {
-	padding-left: 0px;
-	color: blue;
-}
-@media only screen and (max-width : 768px){
-	footer {
-		padding-left: 240px;
-	}
+	bottom: 0px;
 }
 
-/* @media(min-width: 992px){
-	.row {
-		display: flex;
-	}
-} */
+ 
 /* Toggle Styles */
 
 #wrapper {
@@ -27,10 +17,6 @@ footer {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-}
-
-#wrapper.toggled {
-    padding-left: 250px;
 }
 
 #sidebar-wrapper {

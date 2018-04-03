@@ -5,8 +5,10 @@ priority: 1.0
 ---
 
 <!--Main layout-->
-{% include header.html %}
-<div class="container">
+<div class="container ">
+	<div class="content">
+		{% include header.html %}
+	</div>
 	<div class="first row">
 
 		{% for post in site.posts limit:1 %}

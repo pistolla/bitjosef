@@ -59,7 +59,7 @@ title: Default
 </head>
 <body>
 
-	<header>
+	<header class="row">
 		<!--Navbar-->
         <nav class="navbar navbar-dark primary-color-dark navbar-fixed-top" style="display: inline-block;">
             <div class="container">
@@ -71,7 +71,7 @@ title: Default
                 <!--Collapse content-->
                 <div class="collapse navbar-toggleable-xs navbar-right" id="collapseEx">
 					
-					<a  href="{{site.baseurl}}/"><img class="navbar-brand waves-effect waves-light" alt="Dataphile" src="{{site.baseurl}}/img/masthead/dlogo.png" height="43" width="150" ></a></img>
+					<a  href="{{site.baseurl}}/"><img class="navbar-brand waves-effect waves-light" alt="Dataphile" src="{{site.baseurl}}/img/masthead/dlogo.png" height="43" width="150" /></a>
 					{% include nav.html navclass="nav-top" %}
 				</div>
                 <!--/.Collapse content-->
@@ -83,46 +83,29 @@ title: Default
 	
 	</header>
 	<!--wrapper -->
-	<main id="wrapper">
+	<div id="wrapper">
 
 		<!-- Sidebar -->
-		<div id="sidebar-wrapper" class="side-nav fixed orange">
+		<div id="sidebar-wrapper" class="side-nav hidden-md-down fixed orange">
 			{% include sidenav.html %}
 		</div>
 		<!-- /#sidebar-wrapper -->
 
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
-			<div class="container-fluid">
-				{{content}}
-			</div>
+			{{content}}
 		</div>
 		<!-- /#page-content-wrapper -->
-	</main>
+	</div>
 	<!-- /#wrapper -->
 	
 	
 	<!--Footer-->
-	<footer class="page-footer orange center-on-small-only">
+	<footer id="footer" class="page-footer orange ">
 		<!--Footer Links-->
-		<div class="container-fluid">
-			<div class="row" style="text-align: center;">
-				<!--First column-->
-				<div class="col-md-3"></div>
-				<!--/.First column-->
-				
-				<!--Second column-->
-				<div class="col-md-6">
-				
-					<h5 class="title">Quotes</h5>
-					<div class="blockquote blockquote-footer"><p>Time is money</p></div>
-				</div>
-				<!--/.Second column-->
-				
-				<!--Third column-->
-				<div class="col-md-3"></div>
-				<!--/.Third column-->
-			</div>
+		<div class="row" style="text-align: center;">
+			<h5 class="title">Quotes</h5>
+			<div class="blockquote blockquote-footer" style="color: #ffffff; font-size: 22px;"><p>Time is money</p></div>
 		</div>
 		<!--/.Footer Links-->
 		<!--Copyright-->
@@ -177,4 +160,4 @@ title: Default
 		})(jQuery);
 	</script>
 </body>
-</html
+</html>
