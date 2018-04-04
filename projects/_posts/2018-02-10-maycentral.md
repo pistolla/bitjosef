@@ -11,7 +11,7 @@ tags:
 - M-pesa API
 description: MAYCentral is church offerings accounting desktop app central fund paid via M-pesa paybill.
 store:
-- local: https://play.google.com/store/hfjjdnjf
+- local: https://github.com/pistolla/MAYCentral/releases/download/v1.0.31/MAYCentral-1.0.31.exe
 images:
 - thumbnail: /img/content/maycentral-thumb.jpg
   fullsize: /img/content/maycentral.jpg
