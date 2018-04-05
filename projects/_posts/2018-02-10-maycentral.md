@@ -37,6 +37,10 @@ screenshots:
 
 ### Change Log ###
 
+#### v1.0.31 ####
+1. Added to version control for latest download
+2. Released all Windows compatible, executable application
+
 #### v1.0.30 ####
 1. This version has included help menu to improve access
 2. It has redesigned to accommodate more sub panels and models.
