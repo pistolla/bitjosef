@@ -27,7 +27,7 @@ title: MyAppStore
 			<div class="row">
 				<div class="pull-right">
 					{% if (page.store[0]['local']) %}
-					<a href="{{ page.store[0]['local'] }}" class="btn btn-success ">Download latest version</a>
+					<a href="{{ page.store[0]['local'] }}" class="btn btn-success " target="_blank">Download latest version</a>
 					{% endif %}
 					{% if (page.store[0]['google']) %}
 					<a href="{{ page.store[0]['google'] }}" ><img src="{{site.baseurl}}/img/icons/icon-google-play.png" alt="google-play-download" width="150" height="70" /></a>

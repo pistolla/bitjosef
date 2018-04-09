@@ -8,7 +8,7 @@ special: [projects, social]
 tags:
 - Android
 - Firebase 
-- P2P network
+- Alljoyn
 - M-pesa
 - e-commerce
 description: SideHustle is a Android application that helps students participating in ecommerce to discover and advertise products.

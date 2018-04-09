@@ -7,6 +7,7 @@ category: projects
 special: [projects, social]
 tags:
 - Android
+- Python
 - Digital Marketing 
 - Social network
 - M-pesa

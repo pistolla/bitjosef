@@ -8,7 +8,7 @@ title: Default
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 	
-	<title>Joseph Kamau</title>
+	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 	
 	<meta name="description" content="{{page.meta}}">
 	<meta property="og:site_name" content="Dataphile Joe"/>
@@ -42,7 +42,6 @@ title: Default
 	
 	<!-- Template styles -->
     <style rel="stylesheet">
-        /* TEMPLATE STYLES */
         
         main {
             padding-bottom: 2rem;
@@ -83,7 +82,7 @@ title: Default
 	
 	</header>
 	<!--wrapper -->
-	<div id="wrapper">
+	<div id="wrapper" >
 
 		<!-- Sidebar -->
 		<div id="sidebar-wrapper" class="side-nav hidden-md-down fixed orange">
@@ -94,14 +93,15 @@ title: Default
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
 			{{content}}
+			
 		</div>
 		<!-- /#page-content-wrapper -->
+		
+		
 	</div>
 	<!-- /#wrapper -->
-	
-	
 	<!--Footer-->
-	<footer id="footer" class="page-footer orange ">
+	<footer id="footer" class="row page-footer orange ">
 		<!--Footer Links-->
 		<div class="row" style="text-align: center;">
 			<h5 class="title">Quotes</h5>
@@ -116,6 +116,8 @@ title: Default
 		</div>
 		<!--/.Copyright-->
 	</footer>
+	
+	
 
     <!-- SCRIPTS -->
 

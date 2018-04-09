@@ -15,7 +15,7 @@ priority: 1.0
 
 		<div class="col-md-12">
 		  <md-card class="teaser">
-			<div class="keyword"><a href="/tags/{{ post.tags[0] | slugify }}/" class="tag-link">{{ post.tags[0] }}</a></div>
+			<div class="keyword"><a href="{{site.baseurl}}/{{ post.category }}" class="tag-link">{{ post.category }}</a></div>
 			{% if (post.images) %}
 			<div class="image"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}"><img src="{{site.baseurl}}{{ post.images[0]['fullsize'] }}" /></a>
 			</div>
@@ -33,7 +33,7 @@ priority: 1.0
 
 		<div class="col-md-6">
 		  <md-card class="teaser">
-			<div class="keyword"><a href="/tags/{{ post.tags[0] | slugify }}/" class="tag-link">{{ post.tags[0] }}</a></div>
+			<div class="keyword"><a href="{{site.baseurl}}/{{ post.category }}" class="tag-link">{{ post.category }}</a></div>
 			{% if (post.images) %}
 			<div class="image"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}"><img src="{{site.baseurl}}{{ post.images[0]['fullsize'] }}" /></a>
 			</div>
@@ -52,7 +52,7 @@ priority: 1.0
 
 		<div class="col-md-3">
 		  <md-card class="teaser">
-			<div class="keyword"><a href="/tags/{{ post.tags[0] | slugify }}/" class="tag-link">{{ post.tags[0] }}</a></div>
+			<div class="keyword"><a href="{{site.baseurl}}/{{ post.category }}" class="tag-link">{{ post.category }}</a></div>
 			{% if (post.images) %}
 			<div class="image"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}"><img src="{{site.baseurl}}{{ post.images[0]['fullsize'] }}" /></a>
 			</div>
@@ -70,7 +70,7 @@ priority: 1.0
 
 		<div class="col-md-3">
 		  <md-card class="teaser">
-			<div class="keyword"><a href="/tags/{{ post.tags[0] | slugify }}/" class="tag-link">{{ post.tags[0] }}</a></div>
+			<div class="keyword"><a href="{{site.baseurl}}/{{ post.category }}" class="tag-link">{{ post.category }}</a></div>
 			{% if (post.images) %}
 			<div class="image"><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}"><img src="{{site.baseurl}}{{ post.images[0]['fullsize'] }}" /></a>
 			</div>

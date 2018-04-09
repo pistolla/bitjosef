@@ -12,17 +12,21 @@ meta: Discover me through portfolio
 		
 		<!-- first column -->
 		<div class="col-md-9">
-			<div><a href="#"><img src="{{site.baseurl}}/img/icons/icon-acrobat-reader.png" alt="pdf" width="45" height="45"/><span>Download my Resume</span></a></div>
+			<div>
+				<span><a href="#"><img src="{{site.baseurl}}/img/icons/icon-acrobat-reader.png" alt="pdf" width="30" height="30"/><span>Download Resume</span></a>
+				</span>
+				<span><a href="#"><img src="{{site.baseurl}}/img/icons/vcard.png" alt="pdf" width="30" height="30"/><span>Save vCard</span></a>
+				</span>
+			</div>
 			<div class="container">
 				
 				<div class="card">
 					<div class="card-block">
 						<!--Credentials -->
-						<h4 class="card-title">Contact info</h4>
 						<div class="row">
 							<div class="col-md-6" >
-								<div class="center-block" style="text-align: center;">
-									<img class="img-rounded" src="" alt="{{ site.data.resume-credentials[0].content }}" width="85" height="85"/>
+								<div class="center-block text-center" style="text-align: center; border-right: 2px solid #fff000">
+									<img class="img-responsive img-circle center-block" src="{{site.baseurl}}/img/jumbotron/passport.png" alt="{{ site.data.resume-credentials[0].content }}" width="85" height="85"/>
 									<h5>{{ site.data.resume-credentials[0].content }}</h5>
 									<p><i class="fa fa-phone"></i> {{  site.data.resume-credentials[1].content }}</p>
 									<p><i class="fa fa-envelope"></i> {{ site.data.resume-credentials[2].content }}</p>
