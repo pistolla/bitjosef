@@ -12,21 +12,17 @@ meta: Discover me through portfolio
 		
 		<!-- first column -->
 		<div class="col-md-9">
-			<div>
-				<span><a href="#"><img src="{{site.baseurl}}/img/icons/icon-acrobat-reader.png" alt="pdf" width="30" height="30"/><span>Download Resume</span></a>
-				</span>
-				<span><a href="#"><img src="{{site.baseurl}}/img/icons/vcard.png" alt="pdf" width="30" height="30"/><span>Save vCard</span></a>
-				</span>
-			</div>
 			<div class="container">
 				
 				<div class="card">
 					<div class="card-block">
 						<!--Credentials -->
 						<div class="row">
-							<div class="col-md-6" >
-								<div class="center-block text-center" style="text-align: center; border-right: 2px solid #fff000">
-									<img class="img-responsive img-circle center-block" src="{{site.baseurl}}/img/jumbotron/passport.png" alt="{{ site.data.resume-credentials[0].content }}" width="85" height="85"/>
+							<div class="col-md-2">
+								<img class="img-responsive img-circle center-block" src="{{site.baseurl}}/img/jumbotron/passport.png" alt="{{ site.data.resume-credentials[0].content }}" width="85" height="85"/>
+							</div>
+							<div class="col-md-4" style="border-right: 2px solid #fff000">
+								<div class="center-block text-left" >
 									<h5>{{ site.data.resume-credentials[0].content }}</h5>
 									<p><i class="fa fa-phone"></i> {{  site.data.resume-credentials[1].content }}</p>
 									<p><i class="fa fa-envelope"></i> {{ site.data.resume-credentials[2].content }}</p>
@@ -35,6 +31,10 @@ meta: Discover me through portfolio
 							<div class="col-md-6" style="text-align:left;">
 								<p><i class="fa fa-map-marker"></i> {{ site.data.resume-credentials[3].content }}</p>
 								<p><i class="fa fa-map-marker"></i> {{ site.data.resume-credentials[4].content }}</p>
+								<p><a href="#"><img src="{{site.baseurl}}/img/icons/icon-acrobat-reader.png" alt="pdf" width="20" height="20"/>Download Resume</a>
+								</p>
+								<p><a href="#"><img src="{{site.baseurl}}/img/icons/vcard.png" alt="pdf" width="20" height="20"/>Save vCard</a>
+								</p>
 							</div>
 						</div>
 					</div>

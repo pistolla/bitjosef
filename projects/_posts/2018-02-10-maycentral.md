@@ -37,6 +37,13 @@ screenshots:
 
 ### Change Log ###
 
+#### v1.0.34 ####
+1. Feature: Admin can view, add and remove registered users
+2. Feature: Added ability to run on background while minimized on system tray. User is notified when new notifications are received and alert when no internet connection
+3. Feature: User can get in-app messages using status bar at the bottom of the screen
+4. Feature: Include a .MSI binary installation file for Windows OS
+5. BugFix: Created a default location for database backup and restoration
+
 #### v1.0.31 ####
 1. Added to version control for latest download
 2. Released all Windows compatible, executable application
