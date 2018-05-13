@@ -37,6 +37,11 @@ screenshots:
 
 ### Change Log ###
 
+#### v1.2.0 ####
+1. Feature: Reply to payment sender's phone number and update reply status
+2. Feature: Android app to send reply via sms
+3. Feature: Upgrade to new Firebase update
+
 #### v1.0.34 ####
 1. Feature: Admin can view, add and remove registered users
 2. Feature: Added ability to run on background while minimized on system tray. User is notified when new notifications are received and alert when no internet connection
