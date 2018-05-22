@@ -1,7 +1,7 @@
 ---
 layout: store
 title: MAYCentral App
-meta: Software developed for Messianic Assembly of Yahweh church
+meta: Software developed for Messianic Assembly of Yahweh church in Kenya
 source: http://pistolla.github.com/maycentral/README.md
 category: projects
 special: [projects, social]
@@ -12,7 +12,8 @@ tags:
 - Android
 description: MAYCentral is church offerings accounting desktop and mobile app to manage central fund paid via Mpesa pay bill.
 store:
-- local: https://github.com/pistolla/MAYCentral/releases/download/v1.0.34/MAYCentral-1.0.34.exe
+- local: https://github.com/pistolla/MAYCentral/releases/download/v2.0.0/MAYCentral-2.0.0.exe
+- google: https://github.com/pistolla/MAYCentral/releases/download/v2.0.0/app-release-2.0.0.apk
 images:
 - thumbnail: /img/content/maycentral-thumb.jpg
   fullsize: /img/content/maycentral.jpg
@@ -28,13 +29,14 @@ screenshots:
 ---
 
 ## Features ##
-1. Retrieve and manage MPESA paybill payment notification
+1. Retrieve and manage Mpesa pay bill payment confirmation messages
 2. Extract MPESA transaction details to generate a record
 3. Record keeping of payments and withdrawals in local storage
-4. Record keeping of expenses 
+4. Record keeping of expenses that deducts from central fund
 5. Register church branches details and the phone numbers used for payment
 6. Register user who can use the system with different roles
 7. Assign roles to different users
+8. Send SMS reply messages using Android smartphone app
 
 ### Change Log ###
 
@@ -42,6 +44,8 @@ screenshots:
 1. Feature: Reply to payment sender's phone number and update reply status
 2. Feature: Android app to send reply via sms
 3. Feature: Upgrade to new Firebase update
+4. BugFix: Weekly retrieval of messages and records
+ 
 
 #### v1.0.34 ####
 1. Feature: Admin can view, add and remove registered users
