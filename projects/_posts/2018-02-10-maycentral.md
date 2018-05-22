@@ -8,8 +8,9 @@ special: [projects, social]
 tags:
 - JavaFX
 - Firebase
-- M-pesa API
-description: MAYCentral is church offerings accounting desktop app central fund paid via M-pesa paybill.
+- Mpesa
+- Android
+description: MAYCentral is church offerings accounting desktop and mobile app to manage central fund paid via Mpesa pay bill.
 store:
 - local: https://github.com/pistolla/MAYCentral/releases/download/v1.0.34/MAYCentral-1.0.34.exe
 images:

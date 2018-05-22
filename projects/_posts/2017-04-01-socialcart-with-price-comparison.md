@@ -9,7 +9,7 @@ tags:
 - Android
 - Firebase
 - ecommerce
-- M-pesa payment
+- Mpesa
 description: SocialCart is an ecommerce app that allow use to compare price with other stores and pay via M-pesa paybill.
 images:
 - thumbnail: /img/content/socialcart-thumb.jpg
