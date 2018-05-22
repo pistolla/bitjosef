@@ -38,7 +38,7 @@ screenshots:
 
 ### Change Log ###
 
-#### v1.2.0 ####
+#### v2.0.0 ####
 1. Feature: Reply to payment sender's phone number and update reply status
 2. Feature: Android app to send reply via sms
 3. Feature: Upgrade to new Firebase update
