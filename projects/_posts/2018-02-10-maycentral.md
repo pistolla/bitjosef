@@ -13,7 +13,7 @@ tags:
 description: MAYCentral is church offerings accounting desktop and mobile app to manage central fund paid via Mpesa pay bill.
 store:
 - local: https://github.com/pistolla/MAYCentral/releases/download/v2.0.0/MAYCentral-2.0.0.exe
-- google: https://github.com/pistolla/MAYCentral/releases/download/v2.0.0/app-release-2.0.0.apk
+  google: https://github.com/pistolla/MAYCentral/releases/download/v2.0.0/app-release-2_0_0.apk
 images:
 - thumbnail: /img/content/maycentral-thumb.jpg
   fullsize: /img/content/maycentral.jpg
