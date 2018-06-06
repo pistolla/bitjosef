@@ -34,9 +34,9 @@ meta: Discover me through portfolio
 						<hr>
 						
 						<div>
-						{% for post in site.posts limit: 4 %}
+						{% for post in site.posts limit: 8 %}
 							{% for tag in post.tags %}
-							<span><a href="{{site.baseurl}}/?q={{tag}}" class="btn btn-primary btn-selected waves-effect waves-light">{{ tag }}</a></span>
+							<span><a href="{{site.baseurl}}/{{post.category}}/?q={{tag}}" class="btn btn-primary btn-selected waves-effect waves-light">{{ tag }}</a></span>
 							{% endfor %}
 						{% endfor %}
 						</div>

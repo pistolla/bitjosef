@@ -50,7 +50,14 @@
 	
 </head>
 <body>
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=2133305486947477&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 	<header class="row">
 		<!--Navbar-->
         <nav class="navbar navbar-dark primary-color-dark navbar-fixed-top" style="display: inline-block;">
@@ -411,7 +418,7 @@
 			</div>
 			
 			<div class="title"><a href="/bitjosef/projects/2018/02/10/maycentral.html" title="MAYCentral App">MAYCentral App</a></div>
-			<div class="description">MAYCentral is church offerings accounting desktop app central fund paid via M-pesa paybill.</div>
+			<div class="description">MAYCentral is church offerings accounting desktop and mobile app to manage central fund paid via Mpesa pay bill.</div>
 			<div class="read-more"><a href="/bitjosef/projects/2018/02/10/maycentral.html" title="MAYCentral App">Read more »</a></div>
 		  </md-card>
 		</div>

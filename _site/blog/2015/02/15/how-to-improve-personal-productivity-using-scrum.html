@@ -52,7 +52,14 @@
 	
 </head>
 <body>
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=2133305486947477&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 	<header class="row">
 		<!--Navbar-->
         <nav class="navbar navbar-dark primary-color-dark navbar-fixed-top" style="display: inline-block;">
@@ -393,21 +400,8 @@
           
         </div>
   
-          <div id="disqus_thread"></div>
-<script type="text/javascript">
-   
-   var disqus_shortname = 'dataphile';
-   var disqus_identifier = '/blog/2015/02/15/how-to-improve-personal-productivity-using-scrum';
-   var disqus_url = '/bitjosef/blog/2015/02/15/how-to-improve-personal-productivity-using-scrum.html/index.html';
-
-   (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-   })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+          <div class="fb-comments" data-href="/bitjosef/blog/2015/02/15/how-to-improve-personal-productivity-using-scrum.html" data-width="700" data-numposts="100"></div>
+<noscript>Please enable JavaScript to view the <a href="http://facebook.com">comments powered by Facebook comments plugin.</a></noscript>
 
 
         </div>
@@ -489,21 +483,21 @@
 	</div>
 	<!-- /#wrapper -->
 	<!--Footer-->
-	<footer id="footer" class="row page-footer orange ">
+	<!-- <footer id="footer" class="row page-footer orange "> -->
 		<!--Footer Links-->
-		<div class="row" style="text-align: center;">
-			<h5 class="title">Quotes</h5>
-			<div class="blockquote blockquote-footer" style="color: #ffffff; font-size: 22px;"><p>Time is money</p></div>
-		</div>
+		<!-- <div class="row" style="text-align: center;"> -->
+			<!-- <h5 class="title">Quotes</h5> -->
+			<!-- <div class="blockquote blockquote-footer" style="color: #ffffff; font-size: 22px;"><p>Time is money</p></div> -->
+		<!-- </div> -->
 		<!--/.Footer Links-->
 		<!--Copyright-->
-		<div class="footer-copyright">
-			<div class="container-fluid">
-				© 2016 Copyright: <a href="/bitjosef/">Joseph Kamau</a>
-			</div>
-		</div>
+		<!-- <div class="footer-copyright"> -->
+			<!-- <div class="container-fluid"> -->
+				<!-- © 2016 Copyright: <a href="/bitjosef/">Joseph Kamau</a> -->
+			<!-- </div> -->
+		<!-- </div> -->
 		<!--/.Copyright-->
-	</footer>
+	<!-- </footer> -->
 	
 	
 

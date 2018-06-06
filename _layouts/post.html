@@ -11,7 +11,7 @@ layout: default
 				<div class="row">
 					<div class="col-md-9">
 						<div class="info">
-						{{ page.date | time_ago }} - 
+						{{ page.date | day_ago }} - 
 							{% for tag in page.tags %}
 								<span class="badge badge-pill indigo" style="padding: 5px; color: #ffffff;">{{tag | tag_links}}</span>
 							{% endfor %}

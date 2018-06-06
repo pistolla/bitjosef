@@ -7,10 +7,10 @@
 	
 	<title>MAYCentral App - dataphile</title>
 	
-	<meta name="description" content="Software developed for Messianic Assembly of Yahweh church">
+	<meta name="description" content="Software developed for Messianic Assembly of Yahweh church in Kenya">
 	<meta property="og:site_name" content="Dataphile Joe"/>
 	<meta property="og:title" content="MAYCentral App"/>
-	<meta property="og:description" content="MAYCentral is church offerings accounting desktop app central fund paid via M-pesa paybill."/>
+	<meta property="og:description" content="MAYCentral is church offerings accounting desktop and mobile app to manage central fund paid via Mpesa pay bill."/>
 	<meta property="og:image" content="/bitjosef/img/content/maycentral-thumb.jpg"/>
 
 	<meta property="twitter:card" content="summary" />
@@ -18,7 +18,7 @@
 	<meta property="twitter:url" content="/projects/2018/02/10/maycentral.html" />
 	<meta property="twitter:title" content="MAYCentral App" />
 	
-	<meta property="twitter:description" content="MAYCentral is church offerings accounting desktop app central fund paid via M-pesa paybill." />
+	<meta property="twitter:description" content="MAYCentral is church offerings accounting desktop and mobile app to manage central fund paid via Mpesa pay bill." />
 	
 	
 	<meta property="twitter:image" content="/bitjosef/img/content/maycentral-thumb.jpg" />
@@ -54,7 +54,14 @@
 	
 </head>
 <body>
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=2133305486947477&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 	<header class="row">
 		<!--Navbar-->
         <nav class="navbar navbar-dark primary-color-dark navbar-fixed-top" style="display: inline-block;">
@@ -367,7 +374,9 @@
 							
 								<span class="badge badge-pill indigo" style="padding: 5px; color: #ffffff;">Firebase</span>
 							
-								<span class="badge badge-pill indigo" style="padding: 5px; color: #ffffff;">M-pesa API</span>
+								<span class="badge badge-pill indigo" style="padding: 5px; color: #ffffff;">Mpesa</span>
+							
+								<span class="badge badge-pill indigo" style="padding: 5px; color: #ffffff;">Android</span>
 							
 							<div class="pull-right"><div id="share-links">
   <!-- AddThis Button BEGIN -->
@@ -389,8 +398,10 @@
 			<div class="row">
 				<div class="pull-right">
 					
-					<a href="https://github.com/pistolla/MAYCentral/releases/download/v1.0.31/MAYCentral-1.0.31.exe" class="btn btn-success " target="_blank">Download latest version</a>
+					<a href="https://github.com/pistolla/MAYCentral/releases/download/v2.0.0/MAYCentral-2.0.0.exe" class="btn btn-success " target="_blank">Download latest version</a>
 					
+					
+					<a href="https://github.com/pistolla/MAYCentral/releases/download/v2.0.0/app-release-2_0_0.apk" ><img src="/bitjosef/img/icons/icon-google-play.png" alt="google-play-download" width="150" height="70" /></a>
 					
 				</div>
 			</div>
@@ -604,22 +615,32 @@
           
             <h2 id="features">Features</h2>
 <ol>
-  <li>Retrieve and manage MPESA paybill payment notification</li>
+  <li>Retrieve and manage Mpesa pay bill payment confirmation messages</li>
   <li>Extract MPESA transaction details to generate a record</li>
   <li>Record keeping of payments and withdrawals in local storage</li>
-  <li>Record keeping of expenses</li>
+  <li>Record keeping of expenses that deducts from central fund</li>
   <li>Register church branches details and the phone numbers used for payment</li>
   <li>Register user who can use the system with different roles</li>
   <li>Assign roles to different users</li>
+  <li>Send SMS reply messages using Android smartphone app</li>
 </ol>
 
 <h3 id="change-log">Change Log</h3>
+
+<h4 id="v200">v2.0.0</h4>
+<ol>
+  <li>Feature: Reply to payment sender’s phone number and update reply status</li>
+  <li>Feature: Android app to send reply via sms</li>
+  <li>Feature: Upgrade to new Firebase update</li>
+  <li>BugFix: Weekly retrieval of messages and records</li>
+</ol>
 
 <h4 id="v1034">v1.0.34</h4>
 <ol>
   <li>Feature: Admin can view, add and remove registered users</li>
   <li>Feature: Added ability to run on background while minimized on system tray. User is notified when new notifications are received and alert when no internet connection</li>
   <li>Feature: User can get in-app messages using status bar at the bottom of the screen</li>
+  <li>Feature: Added a retractable side navigation</li>
   <li>Feature: Include a .MSI binary installation file for Windows OS</li>
   <li>BugFix: Created a default location for database backup and restoration</li>
 </ol>
@@ -645,21 +666,8 @@
           
 		</div>
 		&nbsp;
-		<div id="disqus_thread"></div>
-<script type="text/javascript">
-   
-   var disqus_shortname = 'dataphile';
-   var disqus_identifier = '/projects/2018/02/10/maycentral';
-   var disqus_url = '/bitjosef/projects/2018/02/10/maycentral.html/index.html';
-
-   (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-   })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+		<div class="fb-comments" data-href="/bitjosef/projects/2018/02/10/maycentral.html" data-width="700" data-numposts="100"></div>
+<noscript>Please enable JavaScript to view the <a href="http://facebook.com">comments powered by Facebook comments plugin.</a></noscript>
 
 		&nbsp;
 	</div>
@@ -754,21 +762,21 @@
 	</div>
 	<!-- /#wrapper -->
 	<!--Footer-->
-	<footer id="footer" class="row page-footer orange ">
+	<!-- <footer id="footer" class="row page-footer orange "> -->
 		<!--Footer Links-->
-		<div class="row" style="text-align: center;">
-			<h5 class="title">Quotes</h5>
-			<div class="blockquote blockquote-footer" style="color: #ffffff; font-size: 22px;"><p>Time is money</p></div>
-		</div>
+		<!-- <div class="row" style="text-align: center;"> -->
+			<!-- <h5 class="title">Quotes</h5> -->
+			<!-- <div class="blockquote blockquote-footer" style="color: #ffffff; font-size: 22px;"><p>Time is money</p></div> -->
+		<!-- </div> -->
 		<!--/.Footer Links-->
 		<!--Copyright-->
-		<div class="footer-copyright">
-			<div class="container-fluid">
-				© 2016 Copyright: <a href="/bitjosef/">Joseph Kamau</a>
-			</div>
-		</div>
+		<!-- <div class="footer-copyright"> -->
+			<!-- <div class="container-fluid"> -->
+				<!-- © 2016 Copyright: <a href="/bitjosef/">Joseph Kamau</a> -->
+			<!-- </div> -->
+		<!-- </div> -->
 		<!--/.Copyright-->
-	</footer>
+	<!-- </footer> -->
 	
 	
 
