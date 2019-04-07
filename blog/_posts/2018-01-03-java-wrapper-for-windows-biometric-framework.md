@@ -4,7 +4,6 @@ title: Java wrapper for Windows Biometric Framework
 meta: WBF
 source: http://www.ebook.com/about
 category: blog
-special: [WBF, JNI]
 tags:
 - Java
 - JNI

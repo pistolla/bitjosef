@@ -8,10 +8,11 @@ special: [projects, social]
 tags:
 - Alljoyn
 - Android
-- p2p network
 - MQTT
-- Firebase
-description: Collection of mobile apps to enhances connection and collaboration among students.
+- DApp
+- Ethereum
+- BlockChain
+description: Collection of distributed mobile apps powered by Ethereum Virtual Machine to enhances connection and collaboration among university/College/Technical students.
 images:
 - thumbnail: /img/content/peerversity-thumb.jpg
   fullsize: /img/content/peerversity.jpg
